@@ -1,0 +1,112 @@
+﻿@page "/message/{eventId:int}/{userId}"
+
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+@using Kurs.Classes
+@using System.ComponentModel.DataAnnotations
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject ApplicationDbContext DbContext
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@rendermode InteractiveServer
+<link href="SendM.css" rel="stylesheet" />
+<PageTitle>Send Message</PageTitle>
+
+<h3>Напишіть Повідомлення</h3>
+
+@if (receiver != null)
+{
+  @*   <div>
+        <p><strong>To:</strong> @receiver.Email</p>
+        <EditForm Model="messageModel" OnValidSubmit="SendMessage" FormName="sendMessageForm">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-group">
+                <label for="content">Message</label>
+                <InputTextArea id="content" class="form-control" @bind-Value="messageModel.Content" />
+                <ValidationMessage For="() => messageModel.Content" />
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </EditForm>
+        <button @onclick="NavigateToMessagesList" class="btn btn-secondary mt-3">View My Messages</button>
+    </div> *@
+    <div class="message-container">
+        <p><strong>To:</strong> @receiver.Email</p>
+        <EditForm Model="messageModel" OnValidSubmit="SendMessage" FormName="sendMessageForm">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+            <div class="form-group">
+                <label for="content">Повідомлення</label>
+                <InputTextArea id="content" class="form-control" @bind-Value="messageModel.Content" />
+                <ValidationMessage For="() => messageModel.Content" />
+            </div>
+            <button type="submit" class="btn btn-primary">Надіслати</button>
+        </EditForm>
+        <button @onclick="NavigateToMessagesList" class="btn btn-secondary mt-3">Переглянути мої повідомлення</button>
+    </div>
+
+}
+else
+{
+    <p>Loading...</p>
+}
+
+@code {
+    [Parameter]
+    public string userId { get; set; }
+
+    [Parameter]
+    public int eventId { get; set; }
+
+    private ApplicationUser receiver;
+    private ApplicationUser sender;
+    private MessageModel messageModel = new MessageModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        receiver = await UserManager.FindByIdAsync(userId);
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        sender = await UserManager.GetUserAsync(user);
+
+        if (receiver == null || sender == null)
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+
+    private async Task SendMessage()
+    {
+        if (receiver != null && sender != null)
+        {
+            var message = new Message
+                {
+                    Content = messageModel.Content,
+                    Timestamp = DateTime.UtcNow,
+                    SenderId = sender.Id,
+                    ReceiverId = receiver.Id,
+                    Sender = sender,
+                    Receiver = receiver
+                };
+
+            DbContext.Messages.Add(message);
+            await DbContext.SaveChangesAsync();
+
+            NavigationManager.NavigateTo($"/event/details/{eventId}");
+        }
+    }
+
+    private void NavigateToMessagesList()
+    {
+        NavigationManager.NavigateTo("/messages/list");
+    }
+
+    public class MessageModel
+    {
+        [System.ComponentModel.DataAnnotations.Required]
+        public string Content { get; set; }
+    }
+}
+
+
+

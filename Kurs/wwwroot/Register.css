@@ -1,0 +1,133 @@
+﻿body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+h2, h3 {
+    color: #333;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+}
+
+.col-lg-6, .col-lg-4 {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 1.5rem 0;
+}
+
+.form-floating {
+    position: relative;
+}
+
+    .form-floating label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        padding: 1rem;
+        pointer-events: none;
+        border: 1px solid transparent;
+        transition: all 0.3s ease;
+    }
+
+    .form-floating input {
+        border-radius: 0.25rem;
+        padding: 1rem;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+        .form-floating input:focus, .form-floating input:not(:placeholder-shown) {
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+            .form-floating input:focus ~ label, .form-floating input:not(:placeholder-shown) ~ label {
+                transform: translateY(-1.5rem) scale(0.85);
+                color: #007bff;
+            }
+
+.mb-3 {
+    margin-bottom: 1.5rem !important;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+    button[type="submit"]:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+    }
+
+.text-danger {
+    color: #dc3545 !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+.ExternalLoginPicker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .ExternalLoginPicker button {
+        background-color: #6c757d;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 10px 0;
+        width: 100%;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+        .ExternalLoginPicker button:hover {
+            background-color: #5a6268;
+            transform: translateY(-2px);
+        }

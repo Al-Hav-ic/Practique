@@ -1,0 +1,402 @@
+﻿
+@page "/Account/Login"
+
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject ILogger<Login> Logger
+@inject NavigationManager NavigationManager
+@inject IdentityRedirectManager RedirectManager
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IHttpContextAccessor HttpContextAccessor
+<link href="LoginForm.css" rel="stylesheet" />
+<PageTitle>Логін</PageTitle>
+
+<h1>Логін</h1>
+<div class="container">
+<div class="row">
+    <div class="col-lg-6">
+        <section>
+            <StatusMessage Message="@errorMessage" />
+            <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
+                <DataAnnotationsValidator />
+                <h2>Використовуйте свій акаунт для аутентифікації</h2>
+                <hr />
+                <ValidationSummary class="text-danger" role="alert" />
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="Input.UserNameOrEmail" id="Input.UserNameOrEmail" class="form-control" autocomplete="username" aria-required="true" placeholder="Username or Email" />
+                    <label for="Input.UserNameOrEmail" class="form-label">Ім'я користувача або Email</label>
+                    <ValidationMessage For="() => Input.UserNameOrEmail" class="text-danger" />
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText type="password" @bind-Value="Input.Password" id="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                    <label for="Input.Password" class="form-label">Пароль</label>
+                    <ValidationMessage For="() => Input.Password" class="text-danger" />
+                </div>
+                <div class="checkbox mb-3">
+                    <label class="form-label">
+                        <InputCheckbox @bind-Value="Input.RememberMe" class="darker-border-checkbox form-check-input" />
+                        Запам'ятати мене
+                    </label>
+                </div>
+                <div>
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">Увійти в систему</button>
+                </div>
+                <div>
+                    <p>
+                        <a href="Account/ForgotPassword">Забули пароль?</a>
+                    </p>
+                    <p>
+                        <a href="@(NavigationManager.GetUriWithQueryParameters("Account/Register", new Dictionary<string, object?> { ["ReturnUrl"] = ReturnUrl }))">Зареєструвати нового учасника</a>
+                    </p>
+                    
+                </div>
+            </EditForm>
+        </section>
+    </div>
+    </div>
+
+</div>
+
+@code {
+    private string? errorMessage;
+    private AuthenticationState? authState;
+    [CascadingParameter]
+    private HttpContext HttpContext { get; set; } = default!;
+
+    [SupplyParameterFromForm]
+    private InputModel Input { get; set; } = new();
+
+    [SupplyParameterFromQuery]
+    private string? ReturnUrl { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (HttpContext == null)
+        {
+            // Якщо HttpContext не доступний, перенаправляємо на домашню сторінку
+            Console.Error.WriteLine("HttpContext is null.");
+            NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            return;
+        }
+        await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+                ReturnUrl = ReturnUrl ?? NavigationManager.Uri;
+        try
+        {
+            var state = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            authState = state;
+
+            // Якщо користувач уже увійшов, перенаправляємо на головну сторінку
+            if (state.User.Identity?.IsAuthenticated == true)
+            {
+                NavigationManager.NavigateTo("/");
+                return;
+            }
+
+            // Перевірка наявності HttpContext
+            var httpContext = HttpContextAccessor.HttpContext;
+
+            if (httpContext == null)
+            {
+                throw new InvalidOperationException("HttpContext is not initialized.");
+            }
+
+            // Перевірка наявності HttpContext.Request
+            if (httpContext.Request == null)
+            {
+                throw new InvalidOperationException("HttpContext.Request is not initialized.");
+            }
+
+            if (HttpMethods.IsGet(httpContext.Request.Method))
+            {
+                // Ваш код для обробки GET-запиту
+            }
+
+            // Ініціалізація ReturnUrl, якщо його немає в параметрах запиту
+            ReturnUrl ??= NavigationManager.Uri;
+        }
+        catch (Exception ex)
+        {
+            // Логування помилки
+            Console.Error.WriteLine($"Виникла помилка: {ex.Message}");
+            errorMessage = "Виникла помилка під час ініціалізації.";
+        }
+    }
+
+    public async Task LoginUser()
+    {
+        var userNameOrEmail = Input.UserNameOrEmail;
+        var user = await UserManager.FindByNameAsync(userNameOrEmail) ?? await UserManager.FindByEmailAsync(userNameOrEmail);
+
+        if (user == null)
+        {
+            errorMessage = "Помилка: Невдала спроба ";
+            return;
+        }
+
+        // Перевірка на наявність правильних даних для входу
+        var result = await SignInManager.PasswordSignInAsync(user.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+        if (result.Succeeded)
+        {
+            Logger.LogInformation("User logged in.");
+            await RedirectUserBasedOnRole(user);
+        }
+        else if (result.RequiresTwoFactor)
+        {
+            RedirectManager.RedirectTo(
+                "Account/LoginWith2fa",
+                new() { ["returnUrl"] = ReturnUrl, ["rememberMe"] = Input.RememberMe });
+        }
+        else if (result.IsLockedOut)
+        {
+            Logger.LogWarning("User account locked out.");
+            RedirectManager.RedirectTo("Account/Lockout");
+        }
+        else
+        {
+            errorMessage = "Error: Invalid login attempt.";
+        }
+    }
+
+    private async Task RedirectUserBasedOnRole(ApplicationUser user)
+    {
+        var roles = await UserManager.GetRolesAsync(user);
+
+        if (roles.Contains("Admin"))
+        {
+            NavigationManager.NavigateTo("/admin/dashboard");
+        }
+        else if (roles.Contains("Organiser"))
+        {
+            NavigationManager.NavigateTo("/organizer/dashboard");
+        }
+        else if (roles.Contains("Participant"))
+        {
+            NavigationManager.NavigateTo("/participant/dashboard");
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+
+    private sealed class InputModel
+    {
+        [Required]
+        public string UserNameOrEmail { get; set; } = "";
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; } = "";
+
+        [Display(Name = "Remember me?")]
+        public bool RememberMe { get; set; }
+    }
+}
+
+ 
+@*  @page "/Account/Login"
+
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject ILogger<Login> Logger
+@inject NavigationManager NavigationManager
+@inject IdentityRedirectManager RedirectManager
+
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IHttpContextAccessor HttpContextAccessor
+<link href="css/LoginForm.css" rel="stylesheet" />
+
+<PageTitle>Логін</PageTitle>
+
+<h1>Логін</h1>
+<div class="row">
+    <div class="col-lg-6">
+        <section>
+            <StatusMessage Message="@errorMessage" />
+            <EditForm Model="Input" method="post" OnValidSubmit="LoginUser" FormName="login">
+                <DataAnnotationsValidator />
+                <h2>Використовуйте свій акаунт для аутентифікації</h2>
+                <hr />
+                <ValidationSummary class="text-danger" role="alert" />
+                <div class="form-floating mb-3">
+                    <InputText @bind-Value="Input.UserNameOrEmail" id="Input.UserNameOrEmail" class="form-control" autocomplete="username" aria-required="true" placeholder="Username or Email" />
+                    <label for="Input.UserNameOrEmail" class="form-label">Ім'я користувача або Email</label>
+                    <ValidationMessage For="() => Input.UserNameOrEmail" class="text-danger" />
+                </div>
+                <div class="form-floating mb-3">
+                    <InputText type="password" @bind-Value="Input.Password" id="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                    <label for="Input.Password" class="form-label">Пароль</label>
+                    <ValidationMessage For="() => Input.Password" class="text-danger" />
+                </div>
+                <div class="checkbox mb-3">
+                    <label class="form-label">
+                        <InputCheckbox @bind-Value="Input.RememberMe" class="darker-border-checkbox form-check-input" />
+                        Запам'ятати мене
+                    </label>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="w-100 btn btn-lg btn-primary">Ввійти в систему</button>
+                </div>
+                <div>
+                    <p>
+                        <a href="Account/ForgotPassword">Забули пароль?</a>
+                    </p>
+                    <p>
+                        <a href="@(NavigationManager.GetUriWithQueryParameters("Account/Register", new Dictionary<string, object?> { ["ReturnUrl"] = ReturnUrl }))">Зареєструвати нового учасника</a>
+                    </p>
+
+                </div>
+            </EditForm>
+        </section>
+    </div>
+</div>
+
+@code {
+    private string? errorMessage;
+    private AuthenticationState? authState;
+    [CascadingParameter]
+    private HttpContext HttpContext { get; set; } = default!;
+
+    [SupplyParameterFromForm]
+    private InputModel Input { get; set; } = new();
+
+    [SupplyParameterFromQuery]
+    private string? ReturnUrl { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (HttpContext == null)
+        {
+            // Якщо HttpContext не доступний, перенаправляємо на домашню сторінку
+            Console.Error.WriteLine("HttpContext is null.");
+            NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            return;
+        }
+        await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
+        ReturnUrl = ReturnUrl ?? NavigationManager.Uri;
+        try
+        {
+            var state = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            authState = state;
+
+            // Якщо користувач уже увійшов, перенаправляємо на головну сторінку
+            if (state.User.Identity?.IsAuthenticated == true)
+            {
+                NavigationManager.NavigateTo("/");
+                return;
+            }
+
+            // Перевірка наявності HttpContext
+            var httpContext = HttpContextAccessor.HttpContext;
+
+            if (httpContext == null)
+            {
+                throw new InvalidOperationException("HttpContext is not initialized.");
+            }
+
+            // Перевірка наявності HttpContext.Request
+            if (httpContext.Request == null)
+            {
+                throw new InvalidOperationException("HttpContext.Request is not initialized.");
+            }
+
+            if (HttpMethods.IsGet(httpContext.Request.Method))
+            {
+                // Ваш код для обробки GET-запиту
+            }
+
+            // Ініціалізація ReturnUrl, якщо його немає в параметрах запиту
+            ReturnUrl ??= NavigationManager.Uri;
+        }
+        catch (Exception ex)
+        {
+            // Логування помилки
+            Console.Error.WriteLine($"Виникла помилка: {ex.Message}");
+            errorMessage = "Виникла помилка під час ініціалізації.";
+        }
+    }
+
+    public async Task LoginUser()
+    {
+        var userNameOrEmail = Input.UserNameOrEmail;
+        var user = await UserManager.FindByNameAsync(userNameOrEmail) ?? await UserManager.FindByEmailAsync(userNameOrEmail);
+
+        if (user == null)
+        {
+            errorMessage = "Помилка: Невдала спроба ";
+            return;
+        }
+
+        // Перевірка на наявність правильних даних для входу
+        var result = await SignInManager.PasswordSignInAsync(user.UserName, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+        if (result.Succeeded)
+        {
+            Logger.LogInformation("User logged in.");
+            await RedirectUserBasedOnRole(user);
+        }
+        else if (result.RequiresTwoFactor)
+        {
+            RedirectManager.RedirectTo(
+                "Account/LoginWith2fa",
+                new() { ["returnUrl"] = ReturnUrl, ["rememberMe"] = Input.RememberMe });
+        }
+        else if (result.IsLockedOut)
+        {
+            Logger.LogWarning("User account locked out.");
+            RedirectManager.RedirectTo("Account/Lockout");
+        }
+        else
+        {
+            errorMessage = "Error: Invalid login attempt.";
+        }
+    }
+
+    private async Task RedirectUserBasedOnRole(ApplicationUser user)
+    {
+        var roles = await UserManager.GetRolesAsync(user);
+
+        if (roles.Contains("Admin"))
+        {
+            NavigationManager.NavigateTo("/admin/dashboard");
+        }
+        else if (roles.Contains("Organiser"))
+        {
+            NavigationManager.NavigateTo("/organizer/dashboard");
+        }
+        else if (roles.Contains("Participant"))
+        {
+            NavigationManager.NavigateTo("/participant/dashboard");
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+
+    private sealed class InputModel
+    {
+        [Required]
+        public string UserNameOrEmail { get; set; } = "";
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; } = "";
+
+        [Display(Name = "Remember me?")]
+        public bool RememberMe { get; set; }
+    }
+}
+ *@

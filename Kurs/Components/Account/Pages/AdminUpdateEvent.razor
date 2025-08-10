@@ -1,0 +1,214 @@
+﻿@* @page "/admin/updateevent/{eventId:int}"
+@using Kurs.Classes
+@using Kurs.Data
+@inject IEventData eventRep
+@inject NavigationManager NavigationManager
+@inject ILogger<AdminUpdateEvent> logger
+<link href="AddUsEv.css" rel="stylesheet" />
+<PageTitle>Редагувати подію</PageTitle>
+
+<h3>Редагувати подію</h3>
+
+@if (eventToUpdate == null)
+{
+    <p><em>Завантаження...</em></p>
+}
+else
+{
+    <EditForm Model="eventToUpdate" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="name">Назва події:</label>
+            <InputText id="name" class="form-control" @bind-Value="eventToUpdate.Name" />
+        </div>
+        <div class="form-group">
+            <label for="date">Дата події:</label>
+            <InputDate id="date" class="form-control" @bind-Value="eventToUpdate.Date" />
+        </div>
+        <div class="form-group">
+            <label for="location">Місце проведення:</label>
+            <InputText id="location" class="form-control" @bind-Value="eventToUpdate.Location" />
+        </div>
+        <div class="form-group">
+            <label for="description">Опис події:</label>
+            <InputTextArea id="description" class="form-control" @bind-Value="eventToUpdate.Description" />
+        </div>
+        <button type="submit" class="btn btn-primary">Зберегти зміни</button>
+    </EditForm>
+    <button class="btn btn-secondary" @onclick="NavigateToEventList">Повернутися до списку подій</button>
+}
+
+@code {
+    [Parameter]
+    public int eventId { get; set; }
+
+    private Event eventToUpdate;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            eventToUpdate = await eventRep.GetEventByIdAsync(eventId);
+
+            if (eventToUpdate == null)
+            {
+                NavigationManager.NavigateTo("/admin/events");
+            }
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Error loading event with ID {eventId}: {ex.Message}");
+            NavigationManager.NavigateTo("/admin/events");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            await eventRep.UpdateEventAsync(eventToUpdate);
+            NavigationManager.NavigateTo("/admin/events");
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Error updating event with ID {eventId}: {ex.Message}");
+        }
+    }
+
+    private void NavigateToEventList()
+    {
+        NavigationManager.NavigateTo("/admin/events");
+    }
+}
+ *@
+
+
+@page "/admin/updateevent/{eventId:int}"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Components.Authorization
+@inject IEventData eventRep
+@inject NavigationManager NavigationManager
+@inject ILogger<AdminUpdateEvent> logger
+@inject UserManager<ApplicationUser> userManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IHttpContextAccessor HttpContextAccessor
+@rendermode InteractiveServer
+<link href="AddUsEv.css" rel="stylesheet" />
+<PageTitle>Редагувати подію</PageTitle>
+
+<h3>Редагувати подію</h3>
+
+@if (eventToUpdate == null)
+{
+    <p><em>Завантаження...</em></p>
+}
+else
+{
+    <EditForm Model="eventToUpdate" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="name">Назва події:</label>
+            <InputText id="name" class="form-control" @bind-Value="eventToUpdate.Name" />
+        </div>
+        <div class="form-group">
+            <label for="date">Дата події:</label>
+            <InputDate id="date" class="form-control" @bind-Value="eventToUpdate.Date" />
+        </div>
+        <div class="form-group">
+            <label for="location">Місце проведення:</label>
+            <InputText id="location" class="form-control" @bind-Value="eventToUpdate.Location" />
+        </div>
+        <div class="form-group">
+            <label for="description">Опис події:</label>
+            <InputTextArea id="description" class="form-control" @bind-Value="eventToUpdate.Description" />
+        </div>
+        <button type="submit" class="btn btn-primary">Зберегти зміни</button>
+    </EditForm>
+    <button class="btn btn-secondary" @onclick="NavigateToEventList">Повернутися до списку подій</button>
+}
+
+@code {
+    [Parameter]
+    public int eventId { get; set; }
+
+    private Event eventToUpdate;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            eventToUpdate = await eventRep.GetEventByIdAsync(eventId);
+
+            if (eventToUpdate == null)
+            {
+                NavigationManager.NavigateTo("/admin/events");
+            }
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Error loading event with ID {eventId}: {ex.Message}");
+            NavigationManager.NavigateTo("/admin/events");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            await eventRep.UpdateEventAsync(eventToUpdate);
+
+            var user = await userManager.GetUserAsync(HttpContextAccessor.HttpContext.User);
+
+            // Перевірка ролі та перенаправлення
+            if (await userManager.IsInRoleAsync(user, "Admin"))
+            {
+                NavigationManager.NavigateTo("/admin/events");
+            }
+            else if (await userManager.IsInRoleAsync(user, "Organiser"))
+            {
+                NavigationManager.NavigateTo("/organizer/dashboard");
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
+            }
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Error updating event with ID {eventId}: {ex.Message}");
+        }
+    }
+
+    private async Task NavigateToEventList()
+    {
+        try
+        {
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            // Перевірка ролі та перенаправлення
+            if (user.IsInRole("Admin"))
+            {
+                NavigationManager.NavigateTo("/admin/events");
+            }
+            else if (user.IsInRole("Organiser"))
+            {
+                NavigationManager.NavigateTo("/organizer/dashboard");
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
+            }
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Error navigating to event list: {ex.Message}");
+        }
+    }
+}

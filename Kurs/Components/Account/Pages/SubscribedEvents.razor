@@ -1,0 +1,112 @@
+﻿@* @page "/subscribed-events"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject DataEvent DbContext
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+
+<PageTitle>My Subscribed Events</PageTitle>
+
+<h3>My Subscribed Events</h3>
+
+@if (events == null)
+{
+    <p>Loading...</p>
+}
+else if (events.Count == 0)
+{
+    <p>You have not subscribed to any events.</p>
+}
+else
+{
+    <ul>
+        @foreach (var eventItem in events)
+        {
+            <div>
+            <li>@eventItem.Name</li>
+            <li>@eventItem.Location</li>
+            <li>@eventItem.Date</li>
+            </div>
+           
+        }
+    </ul>
+}
+
+@code {
+    private List<Event> events;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = await UserManager.GetUserAsync(authState.User);
+
+        if (user == null)
+        {
+            NavigationManager.NavigateTo("/Account/Login");
+            return;
+        }
+
+        events = await DbContext.Events
+            .Where(e => e.Participants.Any(p => p.UserId == user.Id))
+            .ToListAsync();
+    }
+}
+ *@
+ @page "/subscribed-events"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject DataEvent DbContext
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject NavigationManager NavigationManager
+<link href="SubEvents.css" rel="stylesheet" />
+<PageTitle>My Subscribed Events</PageTitle>
+
+<h3>Мої Підписки</h3>
+
+@if (events == null)
+{
+    <p>Loading...</p>
+}
+else if (events.Count == 0)
+{
+    <p>You have not subscribed to any events.</p>
+}
+else
+{
+    <ul class="event-list">
+        @foreach (var eventItem in events)
+        {
+            <div class="event-item">
+            <li>@eventItem.Name</li>
+            <li>@eventItem.Location</li>
+            <li>@eventItem.Date</li>
+            </div>
+        }
+    </ul>
+}
+
+@code {
+    private List<Event> events;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = await UserManager.GetUserAsync(authState.User);
+
+        if (user == null)
+        {
+            NavigationManager.NavigateTo("/Account/Login");
+            return;
+        }
+
+        events = await DbContext.Events
+            .Where(e => e.Participants.Any(p => p.UserId == user.Id))
+            .ToListAsync();
+    }
+}

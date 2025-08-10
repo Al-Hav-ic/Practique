@@ -1,0 +1,133 @@
+﻿@page "/participant/dashboard"
+
+@using Kurs.Classes
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+@using Kurs.Components
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject IEventData EventData
+@inject IHttpContextAccessor HttpContextAccessor
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ApplicationDbContext _context
+<link href="ParticipantDashboard.css" rel="stylesheet" />
+<PageTitle>Dashboard</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <h4>Привіт, @userName! Твоя Роль: @userRole</h4> <button class="btn btn-info" @onclick="NavigateToMessagesListPage">Переглянути Мої Повідомлення</button> 
+        <button class="btn btn-info" @onclick="NavigateToSubEvents">Переглянути Мої Підписки</button>
+        <h3>Доступні події</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Назва Події</th>
+                    <th>Дата</th>
+                    <th>Локація</th>
+                    <th>Опис</th>
+                    <th>Підписатися</th>
+                    <th>Залишити Відгук</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var eventItem in allEvents)
+                {
+                    <tr>
+                        <td>@eventItem.Name</td>
+                        <td>@eventItem.Date</td>
+                        <td>@eventItem.Location</td>
+                        <td>@eventItem.Description</td>
+                        <td>
+                            <button class="btn btn-success" @onclick="() => SignUpForEvent(eventItem.Id)">
+                                Підписатися
+                            </button>
+                        </td>
+                        <td>
+                            <button class="btn btn-primary" @onclick="() => NavigateToReviewPage(eventItem.Id)">
+                                Написати Відгук
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </Authorized>
+    <NotAuthorized>
+        <p>Ви не Авторизовані , просимо перейти за посиланням</p>
+        <NavLink href="Account/Login" class="btn btn-primary">Login</NavLink>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+    private IEnumerable<Event> allEvents = new List<Event>();
+    private string userName;
+    private string userRole;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Завантажуємо всі події
+        allEvents = await EventData.GetAllEventsAsync();
+        // Отримуємо інформацію про поточного користувача
+        await GetUserDetails();
+    }
+
+    private async Task GetUserDetails()
+    {
+        // Отримуємо поточний стан автентифікації
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            var appUser = await UserManager.GetUserAsync(user);
+            userName = appUser.UserName;
+            var roles = await UserManager.GetRolesAsync(appUser);
+            userRole = roles.FirstOrDefault();  // Отримуємо першу роль (якщо є)
+        }
+    }
+
+    private async Task SignUpForEvent(int eventId)
+    {
+        var user = await UserManager.GetUserAsync(HttpContextAccessor.HttpContext.User);
+
+        if (user == null)
+        {
+            // Якщо користувач не знайдений, перенаправляємо на сторінку входу
+            NavigationManager.NavigateTo("/Account/Login");
+            return;
+        }
+
+        // Викликаємо асинхронну функцію для реєстрації на подію
+        var participant = await EventData.RegisterForEventAsync(eventId);
+
+        // Перевіряємо, чи реєстрація пройшла успішно
+        if (participant == null)
+        {
+            // Можна додати повідомлення про помилку або перенаправлення на іншу сторінку
+            NavigationManager.NavigateTo("/Error");
+            return;
+        }
+
+        // Переходимо на сторінку з подіями після реєстрації
+        NavigationManager.NavigateTo("/participant/dashboard");
+    }
+    private void NavigateToMessagesListPage()
+    {
+        NavigationManager.NavigateTo("/messages/list");
+    }
+    private void NavigateToReviewPage(int eventId)
+    {
+        // Перенаправлення на сторінку відгуків для конкретної події
+        NavigationManager.NavigateTo($"/event/{eventId}/add-review");
+    }
+    
+     private void NavigateToSubEvents()
+    {
+        // Перенаправлення на сторінку відгуків для конкретної події
+        NavigationManager.NavigateTo($"/subscribed-events");
+    }
+}

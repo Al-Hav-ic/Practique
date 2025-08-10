@@ -1,0 +1,169 @@
+﻿@* @page "/admin/edituser/{userId}"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject ILogger<AdminUpdateUsers> logger
+@rendermode InteractiveServer
+<PageTitle>Редагувати користувача</PageTitle>
+<link href="UpdateUser.css" rel="stylesheet" />
+<h3>Редагувати користувача</h3>
+
+@if (userToUpdate == null)
+{
+    <p><em>Завантаження...</em></p>
+}
+else
+{
+    <EditForm Model="userToUpdate" OnValidSubmit="HandleValidSubmit" FormName="editUserForm">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="username">Ім'я користувача:</label>
+            <InputText id="username" class="form-control" @bind-Value="userToUpdate.UserName" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <InputText id="email" class="form-control" @bind-Value="userToUpdate.Email" />
+        </div>
+        <div class="form-group">
+            <label for="fullname">Повне ім'я:</label>
+            <InputText id="fullname" class="form-control" @bind-Value="userToUpdate.FullName" />
+        </div>
+        <div class="form-group">
+            <label for="phonenumber">Номер телефону:</label>
+            <InputText id="phonenumber" class="form-control" @bind-Value="userToUpdate.PhoneNumber" />
+        </div>
+        <div class="form-group">
+            <label for="role">Роль:</label>
+            <select id="role" class="form-control" @bind="userRole">
+                @foreach (var role in allRoles)
+                {
+                    <option value="@role">@role</option>
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Зберегти зміни</button>
+
+    </EditForm>
+    <button class="btn btn-secondary" @onclick="NavigateToUserList">Повернутися до списку користувачів</button>
+} *@
+@page "/admin/edituser/{userId}"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject ILogger<AdminUpdateUsers> logger
+@rendermode InteractiveServer
+<PageTitle>Редагувати користувача</PageTitle>
+<link href="UpdateUser.css" rel="stylesheet" />
+<h3>Редагувати користувача</h3>
+
+@if (userToUpdate == null)
+{
+    <p><em>Завантаження...</em></p>
+}
+else
+{
+    <EditForm Model="userToUpdate" OnValidSubmit="HandleValidSubmit" FormName="editUserForm" class="edit-form">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="username">Ім'я користувача:</label>
+            <InputText id="username" class="form-control" @bind-Value="userToUpdate.UserName" />
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <InputText id="email" class="form-control" @bind-Value="userToUpdate.Email" />
+        </div>
+        <div class="form-group">
+            <label for="fullname">Повне ім'я:</label>
+            <InputText id="fullname" class="form-control" @bind-Value="userToUpdate.FullName" />
+        </div>
+        <div class="form-group">
+            <label for="phonenumber">Номер телефону:</label>
+            <InputText id="phonenumber" class="form-control" @bind-Value="userToUpdate.PhoneNumber" />
+        </div>
+        <div class="form-group">
+            <label for="role">Роль:</label>
+            <select id="role" class="form-control" @bind="userRole">
+                @foreach (var role in allRoles)
+                {
+                    <option value="@role">@role</option>
+                }
+            </select>
+        </div>
+        <div class="button-group">
+            <button type="submit" class="btn btn-primary">Зберегти зміни</button>
+            <button type="button" class="btn btn-secondary" @onclick="NavigateToUserList">Повернутися до списку користувачів</button>
+        </div>
+    </EditForm>
+}
+@code {
+    [Parameter]
+    public string userId { get; set; }
+
+    private ApplicationUser userToUpdate;
+    private string userRole;
+    private List<string> allRoles = new List<string> { "Admin", "Organiser", "Participant" };
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            userToUpdate = await UserManager.FindByIdAsync(userId);
+            if (userToUpdate == null)
+            {
+                NavigationManager.NavigateTo("/admin/users");
+                return;
+            }
+
+            var roles = await UserManager.GetRolesAsync(userToUpdate);
+            userRole = roles.FirstOrDefault();
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Error loading user with ID {userId}: {ex.Message}");
+            NavigationManager.NavigateTo("/admin/users");
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            var currentRoles = await UserManager.GetRolesAsync(userToUpdate);
+            if (!currentRoles.Contains(userRole))
+            {
+                await UserManager.RemoveFromRolesAsync(userToUpdate, currentRoles);
+                await UserManager.AddToRoleAsync(userToUpdate, userRole);
+            }
+
+            var result = await UserManager.UpdateAsync(userToUpdate);
+            if (result.Succeeded)
+            {
+                NavigationManager.NavigateTo("/admin/users");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
+                {
+                    logger.LogError($"Error updating user: {error.Description}");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            logger.LogError($"Error updating user with ID {userId}: {ex.Message}");
+        }
+    }
+
+    private void NavigateToUserList()
+    {
+        NavigationManager.NavigateTo("/admin/users");
+    }
+}

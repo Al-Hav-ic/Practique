@@ -1,0 +1,207 @@
+﻿@* 
+
+@page "/admin/addevent"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Components.Authorization
+@using Kurs.Components
+@inject IEventData eventRep
+@inject NavigationManager NavigationManager
+@inject UserManager<ApplicationUser> userManager
+@inject IHttpContextAccessor HttpContextAccessor
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@rendermode InteractiveServer
+<link href="AddUsEv.css" rel="stylesheet" />
+<PageTitle>Додати нову подію</PageTitle>
+
+<h3>Додати нову подію</h3>
+
+<EditForm Model="newEvent" OnValidSubmit="HandleValidSubmit" FormName="addEventForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="name">Назва події:</label>
+        <InputText id="name" class="form-control" @bind-Value="newEvent.Name" />
+    </div>
+    <div class="form-group">
+        <label for="date">Дата події:</label>
+        <InputDate id="date" class="form-control" @bind-Value="eventDate" />
+    </div>
+    <div class="form-group">
+        <label for="time">Час події:</label>
+        <InputText id="time" class="form-control" @bind-Value="eventTime" placeholder="Введіть час (HH:mm)" />
+    </div>
+    <div class="form-group">
+        <label for="location">Місце проведення:</label>
+        <InputText id="location" class="form-control" @bind-Value="newEvent.Location" />
+    </div>
+    <div class="form-group">
+        <label for="description">Опис події:</label>
+        <InputTextArea id="description" class="form-control" @bind-Value="newEvent.Description" />
+    </div>
+    <button type="submit" class="btn btn-primary">Додати подію</button>
+</EditForm>
+
+<button class="btn btn-secondary" @onclick="NavigateToEventList">Повернутися до списку подій</button>
+
+@code {
+    private Event newEvent = new Event();
+    private DateTime eventDate = DateTime.Today;
+    private string eventTime = DateTime.Now.ToString("HH:mm");
+
+    private async Task HandleValidSubmit()
+    {
+        var user = await userManager.GetUserAsync(HttpContextAccessor.HttpContext.User);
+        var organizer = await eventRep.GetOrganizerByUserIdAsync(user.Id);
+
+        if (organizer == null)
+        {
+            organizer = new Organizer { UserId = user.Id, User = user };
+            await eventRep.AddOrganizerAsync(organizer);
+        }
+
+        if (TimeSpan.TryParse(eventTime, out var parsedTime))
+        {
+            newEvent.Date = eventDate.Date.Add(parsedTime);
+            newEvent.OrganizerId = organizer.Id;
+
+            await eventRep.AddEventAsync(newEvent);
+
+            NavigationManager.NavigateTo("/admin/events");
+        }
+        else
+        {
+            Console.WriteLine("Невірний формат часу.");
+        }
+    }
+
+    private void NavigateToEventList()
+    {
+        NavigationManager.NavigateTo("/admin/events");
+    }
+}
+ *@
+@page "/admin/addevent"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Components.Authorization
+@using Kurs.Components
+@inject IEventData eventRep
+@inject NavigationManager NavigationManager
+@inject UserManager<ApplicationUser> userManager
+@inject IHttpContextAccessor HttpContextAccessor
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@rendermode InteractiveServer
+<link href="AddUsEv.css" rel="stylesheet" />
+<PageTitle>Додати нову подію</PageTitle>
+
+<h3>Додати нову подію</h3>
+
+<EditForm Model="newEvent" OnValidSubmit="HandleValidSubmit" FormName="addEventForm" class="add-event-form">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="name">Назва події:</label>
+        <InputText id="name" class="form-control" @bind-Value="newEvent.Name" />
+    </div>
+    <div class="form-group">
+        <label for="date">Дата події:</label>
+        <InputDate id="date" class="form-control" @bind-Value="eventDate" />
+    </div>
+    <div class="form-group">
+        <label for="time">Час події:</label>
+        <InputText id="time" class="form-control" @bind-Value="eventTime" placeholder="Введіть час (HH:mm)" />
+    </div>
+    <div class="form-group">
+        <label for="location">Місце проведення:</label>
+        <InputText id="location" class="form-control" @bind-Value="newEvent.Location" />
+    </div>
+    <div class="form-group">
+        <label for="description">Опис події:</label>
+        <InputTextArea id="description" class="form-control" @bind-Value="newEvent.Description" />
+    </div>
+    <button type="submit" class="btn btn-primary">Додати подію</button>
+</EditForm>
+
+<button class="btn btn-secondary" @onclick="NavigateToEventList">Повернутися до списку подій</button>
+
+@code {
+    private Event newEvent = new Event();
+    private DateTime eventDate = DateTime.Today;
+    private string eventTime = DateTime.Now.ToString("HH:mm");
+
+    private async Task HandleValidSubmit()
+    {
+        try
+        {
+            var user = await userManager.GetUserAsync(HttpContextAccessor.HttpContext.User);
+            var organizer = await eventRep.GetOrganizerByUserIdAsync(user.Id);
+
+            if (organizer == null)
+            {
+                organizer = new Organizer { UserId = user.Id, User = user };
+                await eventRep.AddOrganizerAsync(organizer);
+            }
+
+            if (TimeSpan.TryParse(eventTime, out var parsedTime))
+            {
+                newEvent.Date = eventDate.Date.Add(parsedTime);
+                newEvent.OrganizerId = organizer.Id;
+
+                await eventRep.AddEventAsync(newEvent);
+
+                // Перевірка ролі та перенаправлення
+                if (await userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    NavigationManager.NavigateTo("/admin/events");
+                }
+                else if (await userManager.IsInRoleAsync(user, "Organiser"))
+                {
+                    NavigationManager.NavigateTo("/organizer/dashboard");
+                }
+                else
+                {
+                    NavigationManager.NavigateTo("/");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Невірний формат часу.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+
+    private async Task NavigateToEventList()
+    {
+        try
+        {
+            var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+            var user = authState.User;
+
+            if (user.IsInRole("Admin"))
+            {
+                NavigationManager.NavigateTo("/admin/events");
+            }
+            else if (user.IsInRole("Organiser"))
+            {
+                NavigationManager.NavigateTo("/organizer/dashboard");
+            }
+            else
+            {
+                NavigationManager.NavigateTo("/");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error: {ex.Message}");
+        }
+    }
+}

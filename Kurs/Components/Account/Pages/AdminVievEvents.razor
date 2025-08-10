@@ -1,0 +1,74 @@
+﻿
+ @page "/admin/events"
+@using Kurs.Classes
+@using Kurs.Data
+@inject IEventData eventRep
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+<link href="AdminEvents.css" rel="stylesheet" />
+<PageTitle>Admin - Events</PageTitle>
+
+<h3>Список подій</h3>
+<div class="admin-button-container">
+    <button class="admin-button" @onclick="NavigateToAddEvent">Додати Нову Подію</button>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Назва події</th>
+            <th>Дата і час</th>
+            <th>Локація</th>
+            <th>Опис</th>
+            <th>Переглянути Деталі</th>
+            <th>Редагувати</th>
+            <th>Видалити</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eventItem in allEvents)
+        {
+            <tr>
+                <td>@eventItem.Name</td>
+                <td>@eventItem.Date</td>
+                <td>@eventItem.Location</td>
+                <td>@eventItem.Description</td>
+                <td><button class="admin-button" @onclick="() => NavigateToEventDetails(eventItem.Id)">Переглянути Деталі</button></td>
+                <td><button class="admin-button" @onclick="() => NavigateToEditEvent(eventItem.Id)">Редагувати</button></td>
+                <td><button class="admin-button" @onclick="() => RemoveEvent(eventItem.Id)">Видалити</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private IEnumerable<Event> allEvents = new List<Event>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get all events asynchronously
+        allEvents = await eventRep.GetAllEventsAsync();
+    }
+
+    private void NavigateToAddEvent()
+    {
+        NavigationManager.NavigateTo("/admin/addevent"); // Navigate to add event page
+    }
+
+    private void NavigateToEditEvent(int eventId)
+    {
+        NavigationManager.NavigateTo($"/admin/updateevent/{eventId}"); // Navigate to the edit event page
+    }
+
+    private async Task RemoveEvent(int eventId)
+    {
+        // Call the delete method from the EventData service
+        await eventRep.DeleteEventAsync(eventId);
+
+        // Refresh the list after deletion
+        allEvents = await eventRep.GetAllEventsAsync();
+    }
+    private void NavigateToEventDetails(int eventId)
+    {
+        NavigationManager.NavigateTo($"/event/details/{eventId}"); // Navigate to the event details page
+    }
+}

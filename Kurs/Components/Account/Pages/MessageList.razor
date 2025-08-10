@@ -1,0 +1,241 @@
+﻿@* 
+@page "/messages/list"
+
+@using Kurs.Data
+@using Kurs.Classes
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ApplicationDbContext DbContext
+@inject NavigationManager NavigationManager
+
+<PageTitle>My Messages</PageTitle>
+<link href="MessagesList.css" rel="stylesheet" />
+<h3>Мої повідомлення</h3>
+
+@if (user == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <h4>Надіслані Повідомлення</h4>
+    <ul>
+        @if (sentMessages != null && sentMessages.Any())
+        {
+            @foreach (var message in sentMessages)
+            {
+                @if (message.Receiver != null)  
+                {
+                    <li>
+                        To: @message.Receiver.Email <br />
+                        @message.Timestamp <br />
+                        @message.Content
+                    </li>
+                }
+                else
+                {
+                    <li>Відсутня інформація</li>
+                }
+            }
+        }
+        else
+        {
+            <p>Жодних Повідомлень</p>
+        }
+    </ul>
+
+    <h4>Отримані Повідомлення</h4>
+    <ul>
+        @if (receivedMessages != null && receivedMessages.Any())
+        {
+            @foreach (var message in receivedMessages)
+            {
+                @if (message.Sender != null) 
+                {
+                    <li>
+                        From: @message.Sender.Email <br />
+                        @message.Timestamp <br />
+                        @message.Content
+                    </li>
+                }
+                else
+                {
+                    <li>Відсутня інформація</li>
+                }
+            }
+        }
+        else
+        {
+            <p>Жодних Повідомлень</p>
+        }
+    </ul>
+}
+
+@code {
+    private ApplicationUser user;
+    private List<Message> sentMessages;
+    private List<Message> receivedMessages;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get the authenticated user
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var authUser = authState.User;
+
+        if (authUser == null)
+        {
+            // If there's no authenticated user, redirect to login
+            NavigationManager.NavigateTo("/Identity/Account/Login");
+        }
+        else
+        {
+            user = await UserManager.GetUserAsync(authUser);
+
+            if (user != null)
+            {
+                // Initialize lists to avoid null references
+                sentMessages = await DbContext.Messages
+                    .Where(m => m.SenderId == user.Id)
+                    .Include(m => m.Receiver)  // Include Receiver in the query
+                    .ToListAsync() ?? new List<Message>();
+
+                receivedMessages = await DbContext.Messages
+                    .Where(m => m.ReceiverId == user.Id)
+                    .Include(m => m.Sender)  // Include Sender in the query
+                    .ToListAsync() ?? new List<Message>();
+            }
+            else
+            {
+                // Handle case where the user is still null
+                sentMessages = new List<Message>();
+                receivedMessages = new List<Message>();
+            }
+        }
+    }
+}
+ *@
+ @page "/messages/list"
+
+@using Kurs.Data
+@using Kurs.Classes
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject ApplicationDbContext DbContext
+@inject NavigationManager NavigationManager
+
+<PageTitle>My Messages</PageTitle>
+<link href="MessagesList.css" rel="stylesheet" />
+
+<div class="container">
+    <h3>Мої повідомлення</h3>
+
+    @if (user == null)
+    {
+        <p>Loading...</p>
+    }
+    else
+    {
+        <div class="messages-list">
+            <h4>Надіслані Повідомлення</h4>
+            <ul>
+                @if (sentMessages != null && sentMessages.Any())
+                {
+                    @foreach (var message in sentMessages)
+                    {
+                        @if (message.Receiver != null)
+                        {
+                            <li>
+                                <div class="message-header">To: @message.Receiver.Email</div>
+                                <div class="message-timestamp">@message.Timestamp</div>
+                                <div class="message-content">@message.Content</div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="text-danger">Відсутня інформація</li>
+                        }
+                    }
+                }
+                else
+                {
+                    <p>Жодних Повідомлень</p>
+                }
+            </ul>
+        </div>
+
+        <div class="messages-list">
+            <h4>Отримані Повідомлення</h4>
+            <ul>
+                @if (receivedMessages != null && receivedMessages.Any())
+                {
+                    @foreach (var message in receivedMessages)
+                    {
+                        @if (message.Sender != null)
+                        {
+                            <li>
+                                <div class="message-header">From: @message.Sender.Email</div>
+                                <div class="message-timestamp">@message.Timestamp</div>
+                                <div class="message-content">@message.Content</div>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="text-danger">Відсутня інформація</li>
+                        }
+                    }
+                }
+                else
+                {
+                    <p>Жодних Повідомлень</p>
+                }
+            </ul>
+        </div>
+    }
+</div>
+
+@code {
+    private ApplicationUser user;
+    private List<Message> sentMessages;
+    private List<Message> receivedMessages;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get the authenticated user
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var authUser = authState.User;
+
+        if (authUser == null)
+        {
+            // If there's no authenticated user, redirect to login
+            NavigationManager.NavigateTo("/Identity/Account/Login");
+        }
+        else
+        {
+            user = await UserManager.GetUserAsync(authUser);
+
+            if (user != null)
+            {
+                // Initialize lists to avoid null references
+                sentMessages = await DbContext.Messages
+                    .Where(m => m.SenderId == user.Id)
+                    .Include(m => m.Receiver)  // Include Receiver in the query
+                    .ToListAsync() ?? new List<Message>();
+
+                receivedMessages = await DbContext.Messages
+                    .Where(m => m.ReceiverId == user.Id)
+                    .Include(m => m.Sender)  // Include Sender in the query
+                    .ToListAsync() ?? new List<Message>();
+            }
+            else
+            {
+                // Handle case where the user is still null
+                sentMessages = new List<Message>();
+                receivedMessages = new List<Message>();
+            }
+        }
+    }
+}

@@ -1,0 +1,273 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Kurs.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Kurs.9ehdkd3gz1.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AddUsEv.css",
+      "PackagePath": "staticwebassets\\AddUsEv.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AddUser.css",
+      "PackagePath": "staticwebassets\\AddUser.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AdminDashboard.css",
+      "PackagePath": "staticwebassets\\AdminDashboard.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AdminEvents.css",
+      "PackagePath": "staticwebassets\\AdminEvents.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\EventDetails.css",
+      "PackagePath": "staticwebassets\\EventDetails.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\Home.css",
+      "PackagePath": "staticwebassets\\Home.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\LoginForm.css",
+      "PackagePath": "staticwebassets\\LoginForm.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\MessagesList.css",
+      "PackagePath": "staticwebassets\\MessagesList.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\OrganizerDashboard.css",
+      "PackagePath": "staticwebassets\\OrganizerDashboard.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\ParticipantDashboard.css",
+      "PackagePath": "staticwebassets\\ParticipantDashboard.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\Register.css",
+      "PackagePath": "staticwebassets\\Register.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\ReviewForm.css",
+      "PackagePath": "staticwebassets\\ReviewForm.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\SendM.css",
+      "PackagePath": "staticwebassets\\SendM.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\SubEvents.css",
+      "PackagePath": "staticwebassets\\SubEvents.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\UpdateUser.css",
+      "PackagePath": "staticwebassets\\UpdateUser.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Kurs.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Kurs.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.Kurs.props",
+      "PackagePath": "build\\Kurs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.Kurs.props",
+      "PackagePath": "buildMultiTargeting\\Kurs.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.Kurs.props",
+      "PackagePath": "buildTransitive\\Kurs.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

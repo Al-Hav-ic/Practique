@@ -1,0 +1,127 @@
+﻿
+
+@* @page "/event/details/{eventId:int}"
+
+@using Kurs.Classes
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject IEventData eventRep
+@inject ApplicationDbContext DbContext
+@rendermode InteractiveServer
+@inject AuthenticationStateProvider AuthenticationStateProvider
+<link href="EventDetails.css" rel="stylesheet" />
+<PageTitle>Event Details</PageTitle>
+
+@if (eventItem != null)
+{
+    <div>
+        <h2>@eventItem.Name</h2>
+        <p><strong>Date:</strong> @eventItem.Date</p>
+        <p><strong>Location:</strong> @eventItem.Location</p>
+        <p><strong>Description:</strong> @eventItem.Description</p>
+        <h3>Registered Participants:</h3>
+        <ul>
+            @foreach (var participant in eventItem.Participants)
+            {
+                <li>
+                    @participant.User.UserName - @participant.User.Email
+                    <button class="btn btn-danger btn-sm" @onclick="() => RemoveParticipant(participant.User.Id)">Remove</button>
+                    <button class="btn btn-primary btn-sm" @onclick="() => NavigateToMessagePage(participant.User.Id)">Message</button>
+                </li>
+            }
+        </ul>
+        <button class="btn btn-info" @onclick="NavigateToMessagesListPage">View My Messages</button>
+    </div>
+}
+else
+{
+    <p>Loading...</p>
+} *@
+@page "/event/details/{eventId:int}"
+
+@using Kurs.Classes
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject IEventData eventRep
+@inject ApplicationDbContext DbContext
+@rendermode InteractiveServer
+@inject AuthenticationStateProvider AuthenticationStateProvider
+<link href="EventDetails.css" rel="stylesheet" />
+<PageTitle>Event Details</PageTitle>
+
+@if (eventItem != null)
+{
+    <div class="event-details-container">
+        <h2 class="event-title">@eventItem.Name</h2>
+        <div class="event-info">
+            <p><strong>Час:</strong> @eventItem.Date</p>
+            <p><strong>Локація:</strong> @eventItem.Location</p>
+            <p><strong>Опис:</strong> @eventItem.Description</p>
+        </div>
+
+        <h3 class="participants-title">Учасники події :</h3>
+        <ul class="participants-list">
+            @foreach (var participant in eventItem.Participants)
+            {
+                <li class="participant-item">
+                    <span class="participant-info">@participant.User.UserName - @participant.User.Email</span>
+                    <div class="participant-actions">
+                        <button class="btn btn-danger btn-sm" @onclick="() => RemoveParticipant(participant.User.Id)">Remove</button>
+                        <button class="btn btn-primary btn-sm" @onclick="() => NavigateToMessagePage(participant.User.Id)">Message</button>
+                    </div>
+                </li>
+            }
+        </ul>
+        <button class="btn btn-info" @onclick="NavigateToMessagesListPage">Переглянути Мої Повідомлення</button>
+    </div>
+}
+else
+{
+    <p class="loading-text">Loading...</p>
+}
+@code {
+    [Parameter]
+    public int eventId { get; set; }
+
+    private Event eventItem;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Get event details by event ID
+        eventItem = await eventRep.GetEventByIdAsync(eventId);
+
+        if (eventItem == null)
+        {
+            // Redirect or show an error message if event not found
+            NavigationManager.NavigateTo("/organizer/dashboard");
+        }
+    }
+
+    private async Task RemoveParticipant(string userId)
+    {
+        if (eventItem != null)
+        {
+            var participant = eventItem.Participants.FirstOrDefault(p => p.User.Id == userId);
+            if (participant != null)
+            {
+                eventItem.Participants.Remove(participant);
+                await eventRep.UpdateEventAsync(eventItem);
+                StateHasChanged();
+            }
+        }
+    }
+
+    private void NavigateToMessagePage(string userId)
+    {
+        NavigationManager.NavigateTo($"/message/{eventId}/{userId}");
+    }
+
+    private void NavigateToMessagesListPage()
+    {
+        NavigationManager.NavigateTo("/messages/list");
+    }
+}

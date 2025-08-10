@@ -1,0 +1,90 @@
+﻿
+ @page "/admin/users"
+
+@using Kurs.Data
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@using Kurs.Classes
+@inject UserManager<ApplicationUser> UserManager
+@inject IEventData EventData
+@inject ApplicationDbContext DbContext
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+<link href="AdminEvents.css" rel="stylesheet" />
+@* <link href="cssprop/AdminStyle.css" rel="stylesheet" /> *@
+<PageTitle>Адміністратор</PageTitle>
+
+<h3>Список користувачів</h3>
+<button class="admin-button" @onclick="NavigateToAddUser">Додати нового користувача</button>
+<button class="admin-button" @onclick="NavigateToDashboard">Перейти на панель управління</button>
+<!-- Виведення таблиці всіх користувачів -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>Ім'я користувача'</th>
+            <th>Email</th>
+            <th>Ініціали</th>
+            <th>Роль</th>
+            <th>Повідомлення</th>
+            <th>Редагувати</th>
+            <th>Видалити</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in allUsers)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.FullName</td>
+                <td>@user.Role</td>
+                <td><button class="admin-button" @onclick="() => NavigateToMessagePage(user.Id)">Надіслати </button></td>
+                <td><button class="admin-button" @onclick="() => NavigateToEditUser(user.Id)">Редагувати</button></td>
+                <td><button class="admin-button" @onclick="() => RemoveUser(user.Id)">Видалити</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<ApplicationUser> allUsers = new List<ApplicationUser>();
+    private Admin admin;
+
+    // Завантажуємо всіх користувачів під час ініціалізації компонента
+    protected override async Task OnInitializedAsync()
+    {
+        admin = new Admin(UserManager, EventData, DbContext);
+        allUsers = await admin.GetAllUsersAsync(); // Отримуємо всіх користувачів
+        foreach (var user in allUsers)
+        {
+            var roles = await UserManager.GetRolesAsync(user);
+            user.Role = roles.FirstOrDefault(); // Отримуємо першу роль (якщо є) для кожного користувача
+        }
+    }
+
+    private async Task RemoveUser(string userId)
+    {
+        await admin.RemoveUser(userId, allUsers); // Викликаємо метод RemoveUser з класу Admin
+        allUsers = await admin.GetAllUsersAsync(); // Оновлюємо список користувачів
+        StateHasChanged(); // Оновлюємо стан компонента
+    }
+
+    private void NavigateToEditUser(string userId)
+    {
+        NavigationManager.NavigateTo($"/admin/edituser/{userId}"); // Переходимо до сторінки редагування користувача
+    }
+
+    private void NavigateToAddUser()
+    {
+        NavigationManager.NavigateTo("/admin/adduser"); // Переходимо до сторінки додавання нового користувача
+    }
+
+    private void NavigateToDashboard()
+    {
+        NavigationManager.NavigateTo("/admin/dashboard"); // Переходимо до сторінки додавання нового користувача
+    }
+    private void NavigateToMessagePage(string userId)
+    {
+        NavigationManager.NavigateTo($"/message/{userId}");
+    }
+}

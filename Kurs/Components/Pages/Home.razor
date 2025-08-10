@@ -1,0 +1,156 @@
+﻿@* @page "/"
+@using Kurs.Classes
+
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+@using Kurs.Components
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject IEventData EventData
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<PageTitle>Home</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <h4>Привіт @userName</h4>
+        <h4>Ваша Роль: @userRole</h4>
+        
+    </Authorized>
+    <NotAuthorized>
+        <p>Ви не залогінились</p>
+        <NavLink href="Account/Login" class="btn btn-primary">Login</NavLink>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Назва Події</th>
+            <th>Дата</th>
+            <th>Опис</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eventItem in allEvents)
+        {
+            <tr>
+                <td>@eventItem.Name</td>
+                <td>@eventItem.Date</td>
+                <td>@eventItem.Description</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private IEnumerable<Event> allEvents = new List<Event>();
+    private string userName;
+    private string userRole;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Завантажуємо всі події
+        allEvents = await EventData.GetAllEventsAsync();
+        // Отримуємо інформацію про поточного користувача
+        await GetUserDetails();
+    }
+
+    private async Task GetUserDetails()
+    {
+        // Отримуємо поточний стан автентифікації
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            var appUser = await UserManager.GetUserAsync(user);
+            userName = appUser.UserName;
+            var roles = await UserManager.GetRolesAsync(appUser);
+            userRole = roles.FirstOrDefault();  // Отримуємо першу роль (якщо є)
+        }
+    }
+
+    private async Task Check()
+    {
+        await GetUserDetails();
+    }
+}
+ *@
+ @page "/"
+@using Kurs.Classes
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+@using Kurs.Components
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject IEventData EventData
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+<link href="Home.css" rel="stylesheet" />
+<PageTitle>Home</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <h4>Привіт @userName</h4>
+        <h4>Ваша Роль: @userRole</h4>
+    </Authorized>
+    <NotAuthorized>
+        <p>Ви Не Залогінились , Щоб Отримати Доступ До Подій Натисніть Кнопку</p>
+        <NavLink href="Account/Login" class="btn btn-primary">Login</NavLink>
+    </NotAuthorized>
+</AuthorizeView>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Назва Події</th>
+            <th>Дата</th>
+            <th>Опис</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eventItem in allEvents)
+        {
+            <tr>
+                <td>@eventItem.Name</td>
+                <td>@eventItem.Date</td>
+                <td>@eventItem.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private IEnumerable<Event> allEvents = new List<Event>();
+    private string userName;
+    private string userRole;
+    protected override async Task OnInitializedAsync()
+    {
+        // Завантажуємо всі події
+        allEvents = await EventData.GetAllEventsAsync();
+        // Отримуємо інформацію про поточного користувача
+        await GetUserDetails();
+    }
+
+    private async Task GetUserDetails()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+        if (user.Identity.IsAuthenticated)
+        {
+            var appUser = await UserManager.GetUserAsync(user);
+            userName = appUser.UserName;
+            var roles = await UserManager.GetRolesAsync(appUser);
+            userRole = roles.FirstOrDefault();  // Отримуємо першу роль (якщо є)
+        }
+    }
+    private async Task Check()
+    {
+        await GetUserDetails();
+    }
+}

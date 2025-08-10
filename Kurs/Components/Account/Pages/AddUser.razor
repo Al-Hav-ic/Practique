@@ -1,0 +1,184 @@
+﻿
+ 
+@page "/Admin/AddUser"
+<link href="AddUser.css" rel="stylesheet" />
+@using System.ComponentModel.DataAnnotations
+@using System.Text
+@using System.Text.Encodings.Web
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.WebUtilities
+@using Kurs.Data
+
+@inject UserManager<ApplicationUser> UserManager
+@inject IUserStore<ApplicationUser> UserStore
+@inject SignInManager<ApplicationUser> SignInManager
+@inject IEmailSender<ApplicationUser> EmailSender
+@inject ILogger<AddUser> Logger
+@inject NavigationManager NavigationManager
+@inject IdentityRedirectManager RedirectManager
+@rendermode InteractiveServer
+<PageTitle>Додати користувача</PageTitle>
+
+<h1>Додати користувача</h1>
+
+<div class="row">
+    <div class="col-lg-6">
+        <EditForm Model="Input" OnValidSubmit="AddUserAsync" FormName="addUserForm">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <div class="form-group">
+                <label for="UserName">Ім'я Користувача</label>
+                <InputText id="UserName" class="form-control" @bind-Value="Input.UserName" />
+                <ValidationMessage For="() => Input.UserName" />
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <InputText id="Email" type="email" class="form-control" @bind-Value="Input.Email" />
+                <ValidationMessage For="() => Input.Email" />
+            </div>
+            <div class="form-group">
+                <label for="Password">Пароль</label>
+                <InputText id="Password" type="password" class="form-control" @bind-Value="Input.Password" />
+                <ValidationMessage For="() => Input.Password" />
+            </div>
+            <div class="form-group">
+                <label for="ConfirmPassword">Підтвердіть пароль</label>
+                <InputText id="ConfirmPassword" type="password" class="form-control" @bind-Value="Input.ConfirmPassword" />
+                <ValidationMessage For="() => Input.ConfirmPassword" />
+            </div>
+            <div class="form-group">
+                <label for="Role">Роль</label>
+                <InputSelect id="Role" class="form-control" @bind-Value="Input.Role">
+                    <option value="">Select Role</option>
+                    <option value="Admin">Адміністратор</option>
+                    <option value="Organiser">Організатор</option>
+                    <option value="Participant">Учасник</option>
+                </InputSelect>
+                <ValidationMessage For="() => Input.Role" />
+            </div>
+            <button type="submit" class="btn btn-primary">Додати користувача</button>
+            <button type="button" class="btn btn-secondary" @onclick="NavigateToUserList">Відмінити</button>
+        </EditForm>
+    </div>
+</div>
+
+@if (Errors.Any())
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in Errors)
+            {
+                <li>@error</li>
+            }
+        </ul>
+    </div>
+}
+
+@code {
+    private InputModel Input { get; set; } = new InputModel();
+    private List<string> Errors { get; set; } = new List<string>();
+
+    private async Task AddUserAsync()
+    {
+        Errors.Clear();
+
+        var user = CreateUser();
+        user.UserName = Input.UserName;
+        await UserStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
+        var emailStore = GetEmailStore();
+        await emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+        var result = await UserManager.CreateAsync(user, Input.Password);
+
+        if (result.Succeeded)
+        {
+            Logger.LogInformation("User created a new account with password.");
+
+            var userId = await UserManager.GetUserIdAsync(user);
+            var code = await UserManager.GenerateEmailConfirmationTokenAsync(user);
+            code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+            var callbackUrl = NavigationManager.GetUriWithQueryParameters(
+                NavigationManager.ToAbsoluteUri("Account/ConfirmEmail").AbsoluteUri,
+                new Dictionary<string, object?> { ["userId"] = userId, ["code"] = code });
+
+            await EmailSender.SendConfirmationLinkAsync(user, Input.Email, HtmlEncoder.Default.Encode(callbackUrl));
+            // Додавання ролі користувачу
+            var roleResult = await UserManager.AddToRoleAsync(user, Input.Role);
+            if (!roleResult.Succeeded)
+            {
+                Errors.AddRange(roleResult.Errors.Select(e => e.Description));
+                await UserManager.DeleteAsync(user); // Видаляємо користувача, якщо не вдалося додати роль
+                return;
+            }
+
+            if (UserManager.Options.SignIn.RequireConfirmedAccount)
+            {
+                NavigationManager.NavigateTo($"Account/RegisterConfirmation?email={Input.Email}");
+            }
+            else
+            {
+                await SignInManager.SignInAsync(user, isPersistent: false);
+                NavigationManager.NavigateTo("/admin/users");
+            }
+        }
+        else
+        {
+            Errors.AddRange(result.Errors.Select(e => e.Description));
+        }
+    }
+
+    private ApplicationUser CreateUser()
+    {
+        try
+        {
+            return Activator.CreateInstance<ApplicationUser>();
+        }
+        catch
+        {
+            throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
+                $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor.");
+        }
+    }
+
+    private IUserEmailStore<ApplicationUser> GetEmailStore()
+    {
+        if (!UserManager.SupportsUserEmail)
+        {
+            throw new NotSupportedException("The default UI requires a user store with email support.");
+        }
+        return (IUserEmailStore<ApplicationUser>)UserStore;
+    }
+
+    private void NavigateToUserList()
+    {
+        NavigationManager.NavigateTo("/admin/users");
+    }
+
+    private class InputModel
+    {
+        [Required]
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+        [Required]
+        [StringLength(100, MinimumLength = 6, ErrorMessage = "The password must be at least 6 characters long.")]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string Password { get; set; }
+
+        [Required]
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm Password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Role")]
+        public string Role { get; set; }
+    }
+}

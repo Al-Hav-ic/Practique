@@ -1,0 +1,212 @@
+﻿@* 
+@page "/event/{EventId}/add-review"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject DataEvent DbContext
+@inject NavigationManager NavigationManager
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@rendermode InteractiveServer
+
+<PageTitle>Leave a Review</PageTitle>
+
+<h3>Leave a Review for Event</h3>
+
+@if (isError)
+{
+    <div class="alert alert-danger mt-3">
+        You have already left a review for this event.
+    </div>
+}
+
+<EditForm Model="@review" OnValidSubmit="HandleSubmit" FormName="ReviewForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="content">Review Content</label>
+        <InputTextArea id="content" class="form-control" @bind-Value="review.Content" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Review</button>
+</EditForm>
+
+@if (isSuccess)
+{
+    <div class="alert alert-success mt-3">Your review has been submitted successfully!</div>
+}
+
+@if (isError)
+{
+    <div class="alert alert-danger mt-3">An error occurred while submitting your review.</div>
+}
+
+@code {
+    [Parameter] public string EventId { get; set; }
+    private Review review = new Review();
+    private bool isSuccess = false;
+    private bool isError = false;
+    private int parsedEventId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Convert EventId from string to int
+        if (!int.TryParse(EventId, out parsedEventId))
+        {
+            isError = true;
+            return;
+        }
+
+        // Get the current user's authentication state
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = await UserManager.GetUserAsync(authState.User);
+
+        if (user == null)
+        {
+            NavigationManager.NavigateTo("/login");
+            return;
+        }
+
+        // Check if the user has already left a review for this event
+        var existingReview = await DbContext.Reviews
+            .FirstOrDefaultAsync(r => r.EventId == parsedEventId && r.UserId == user.Id);
+
+        if (existingReview != null)
+        {
+            // Show a message indicating the user has already left a review
+            isError = true;
+            return;
+        }
+
+        // Initialize the review object
+        review.EventId = parsedEventId;
+        review.UserId = user.Id;
+        review.CreatedAt = DateTime.Now;
+    }
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            DbContext.Reviews.Add(review);
+            await DbContext.SaveChangesAsync();
+            isSuccess = true;
+            isError = false;
+
+            // Optionally, navigate to the event page after review submission
+            NavigationManager.NavigateTo($"/event/{parsedEventId}");
+        }
+        catch (Exception)
+        {
+            isError = true;
+            isSuccess = false;
+        }
+    }
+}
+ *@
+ @page "/event/{EventId}/add-review"
+@using Kurs.Classes
+@using Kurs.Data
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.EntityFrameworkCore
+@inject DataEvent DbContext
+@inject NavigationManager NavigationManager
+@inject UserManager<ApplicationUser> UserManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@rendermode InteractiveServer
+<link href="ReviewForm.css" rel="stylesheet" />
+
+<PageTitle>Leave a Review</PageTitle>
+
+<h3>Залиште Відгук На Подію</h3>
+
+@if (isError)
+{
+    <div class="alert alert-danger mt-3">
+        Ви вже залишили свій відгук про цю подію 
+    </div>
+}
+
+<EditForm Model="@review" OnValidSubmit="HandleSubmit" FormName="ReviewForm" class="review-form">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="content">Напишіть свій відгук про подію нижче</label>
+        <InputTextArea id="content" class="form-control" @bind-Value="review.Content" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Залишити відгук</button>
+</EditForm>
+
+@if (isSuccess)
+{
+    <div class="alert alert-success mt-3">Ваш Відгук прийнято</div>
+}
+
+@code {
+    [Parameter] public string EventId { get; set; }
+    private Review review = new Review();
+    private bool isSuccess = false;
+    private bool isError = false;
+    private int parsedEventId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        
+        if (!int.TryParse(EventId, out parsedEventId))
+        {
+            isError = true;
+            return;
+        }
+
+       
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = await UserManager.GetUserAsync(authState.User);
+
+        if (user == null)
+        {
+            NavigationManager.NavigateTo("/login");
+            return;
+        }
+
+        
+        var existingReview = await DbContext.Reviews
+            .FirstOrDefaultAsync(r => r.EventId == parsedEventId && r.UserId == user.Id);
+
+        if (existingReview != null)
+        {
+         
+            isError = true;
+            return;
+        }
+
+      
+        review.EventId = parsedEventId;
+        review.UserId = user.Id;
+        review.CreatedAt = DateTime.Now;
+    }
+
+    private async Task HandleSubmit()
+    {
+        try
+        {
+            DbContext.Reviews.Add(review);
+            await DbContext.SaveChangesAsync();
+            isSuccess = true;
+            isError = false;
+
+            
+            NavigationManager.NavigateTo($"/event/{parsedEventId}");
+        }
+        catch (Exception)
+        {
+            isError = true;
+            isSuccess = false;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+﻿
+
+
+/*body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h3, h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.3s;
+    }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #80bdff;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    button.btn-primary {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+        button.btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    button.btn-secondary {
+        background-color: #6c757d;
+        color: #fff;
+        margin-top: 1rem;
+    }
+
+        button.btn-secondary:hover {
+            background-color: #5a6268;
+        }*/
+
+/* Center buttons */
+/*button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}*/
+
+/* List styles */
+/*ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+    ul li {
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        background-color: #fff;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s;
+    }
+
+        ul li:hover {
+            background-color: #f1f1f1;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+            ul li a:hover {
+                text-decoration: underline;
+            }*/
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add-event-form {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.3s;
+    }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: #80bdff;
+            outline: none;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+.add-event-form .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.add-event-form .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+    .add-event-form .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.add-event-form .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+    .add-event-form .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}

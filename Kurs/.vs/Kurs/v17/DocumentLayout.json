@@ -1,0 +1,1839 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\classes\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:classes\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\classes\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:classes\\organizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\resendemailconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\resendemailconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\resetpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\resetpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\senmes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\senmes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\lockout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\lockout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\confirmemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\confirmemail.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\deletepersonaldata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\deletepersonaldata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\email.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\email.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\enableauthenticator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\enableauthenticator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\accessdenied.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\accessdenied.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\layout\\navmenu.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\data\\ieventdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:data\\ieventdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\data\\eventdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:data\\eventdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:data\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\subscribedevents.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\subscribedevents.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\resetpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\resetpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\sendm.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\sendm.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\adminmanager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\adminmanager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\notauthorized.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\notauthorized.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\adminvievusers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\adminvievusers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\data\\eventdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:data\\eventdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\participantmanager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\participantmanager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\organizermanager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\organizermanager.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\messagelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\messagelist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\messageslist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\messageslist.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\adminupdateevent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\adminupdateevent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\addevent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\addevent.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\adduser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\adduser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\eventdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\eventdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\adminupdateusers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\adminupdateusers.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\classes\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:classes\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\index.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\shared\\showrecoverycodes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\shared\\showrecoverycodes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\shared\\statusmessage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\shared\\statusmessage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\shared\\redirecttologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\shared\\redirecttologin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\registerconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\registerconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\loginwithrecoverycode.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\loginwithrecoverycode.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\loginwith2fa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\loginwith2fa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\invaliduser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\invaliduser.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\invalidpasswordreset.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\invalidpasswordreset.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\forgotpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\forgotpasswordconfirmation.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\forgotpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\forgotpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\externallogin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\externallogin.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\eventwritereview.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\eventwritereview.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\confirmemailchange.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\confirmemailchange.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\adminvievevents.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\adminvievevents.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\pages\\error.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\pages\\auth.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\pages\\auth.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\classes\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:classes\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\classes\\participant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:classes\\participant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\classes\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:classes\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\classes\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:classes\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\externallogins.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\externallogins.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\disable2fa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\disable2fa.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\changepassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\changepassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\twofactorauthentication.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\twofactorauthentication.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\setpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\setpassword.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\resetauthenticator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\resetauthenticator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\personaldata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\personaldata.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\routes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\shared\\managenavmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\shared\\managenavmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\shared\\managelayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\shared\\managelayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\shared\\externalloginpicker.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\shared\\externalloginpicker.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\loginform.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\loginform.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\admindashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\admindashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\participantdashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\participantdashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\organizerdashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\organizerdashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\adminevents.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\adminevents.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\subevents.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\subevents.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\sendm.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\sendm.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\register.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\adduser.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\adduser.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\updateuser.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\updateuser.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\reviewform.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\reviewform.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\eventdetails.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\eventdetails.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\wwwroot\\addusev.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:wwwroot\\addusev.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\layout\\mainlayout.razor.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\identityuseraccessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\identityuseraccessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\identityredirectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\identityredirectmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\identityrevalidatingauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\identityrevalidatingauthenticationstateprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\identitynoopemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\identitynoopemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\identitycomponentsendpointroutebuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\identitycomponentsendpointroutebuilderextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\components\\account\\pages\\manage\\generaterecoverycodes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:components\\account\\pages\\manage\\generaterecoverycodes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.Messages.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\ApplicationDb\\20241223112156_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\ApplicationDb\\20241223112156_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241223112101_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241223112101_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241223105502_MakeOrganizerIdNullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241223105502_MakeOrganizerIdNullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\ApplicationDb\\20241223103700_InitialApplicationDbMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\ApplicationDb\\20241223103700_InitialApplicationDbMigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241222162936_MakeOrganizerIdNullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20241222162936_MakeOrganizerIdNullable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.ApplicationUser.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.EventParticipant.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\20241213210714_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Migrations\\20241213210714_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Migrations\\00000000000000_CreateIdentitySchema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\DataEventMigrations\\20241221183429_UpdateEventParticipantRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\DataEventMigrations\\20241221183429_UpdateEventParticipantRelations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Migrations\\ApplicationDbContextModelSnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\migrations\\dataeventmigrations\\20241223112745_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:migrations\\dataeventmigrations\\20241223112745_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|d:\\kompsc\\edu\\cpp_codes\\kurs\\migrations\\20241223112659_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F2BFCE9-F194-4841-889B-307FBE6D6379}|Kurs.csproj|solutionrelative:migrations\\20241223112659_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "SubscribedEvents.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\SubscribedEvents.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\SubscribedEvents.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\SubscribedEvents.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\SubscribedEvents.razor",
+              "ViewState": "AgIAADQAAAAAAAAAAAAowHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-26T18:07:54.649Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SenMes.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\SenMes.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\SenMes.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\SenMes.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\SenMes.razor",
+              "ViewState": "AgIAACgAAAAAAAAAAAAowFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T21:20:00.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ResetPassword.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ResetPassword.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ResetPassword.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ResetPassword.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ResetPassword.razor",
+              "ViewState": "AgIAADQAAAAAAAAAAAAowGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T20:09:58.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResendEmailConfirmation.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ResendEmailConfirmation.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ResendEmailConfirmation.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ResendEmailConfirmation.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ResendEmailConfirmation.razor",
+              "ViewState": "AgIAABEAAAAAAAAAAAAowEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:24.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T11:29:48.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Organizer.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Organizer.cs",
+              "RelativeDocumentMoniker": "Classes\\Organizer.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Organizer.cs",
+              "RelativeToolTip": "Classes\\Organizer.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAwGgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T19:57:19.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Admin.cs",
+              "RelativeDocumentMoniker": "Classes\\Admin.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Admin.cs",
+              "RelativeToolTip": "Classes\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:56:25.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Register.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Register.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Register.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAtwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-27T11:38:45.326Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Login.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Login.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Login.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T11:00:08.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Lockout.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Lockout.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Lockout.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Lockout.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Lockout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:37.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConfirmEmail.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ConfirmEmail.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ConfirmEmail.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ConfirmEmail.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ConfirmEmail.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-22T11:30:14.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DeletePersonalData.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\DeletePersonalData.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\DeletePersonalData.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\DeletePersonalData.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\DeletePersonalData.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:14.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Email.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\Email.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\Email.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\Email.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\Email.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:13.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "EnableAuthenticator.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\EnableAuthenticator.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\EnableAuthenticator.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\EnableAuthenticator.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\EnableAuthenticator.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:04.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AccessDenied.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AccessDenied.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\AccessDenied.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AccessDenied.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\AccessDenied.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T12:15:52.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NavMenu.razor.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeDocumentMoniker": "Components\\Layout\\NavMenu.razor.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Layout\\NavMenu.razor.css",
+              "RelativeToolTip": "Components\\Layout\\NavMenu.razor.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-23T18:31:47.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IEventData.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\IEventData.cs",
+              "RelativeDocumentMoniker": "Data\\IEventData.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\IEventData.cs",
+              "RelativeToolTip": "Data\\IEventData.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T14:23:04.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EventDbContext.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\EventDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\EventDbContext.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\EventDbContext.cs",
+              "RelativeToolTip": "Data\\EventDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC4AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T18:12:41.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationUser.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\ApplicationUser.cs",
+              "RelativeToolTip": "Data\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T21:07:06.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T21:05:38.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ResetPasswordConfirmation.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ResetPasswordConfirmation.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ResetPasswordConfirmation.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ResetPasswordConfirmation.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ResetPasswordConfirmation.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T20:09:59.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "SendM.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\SendM.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\SendM.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\SendM.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\SendM.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T20:11:25.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "AdminManager.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminManager.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\AdminManager.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminManager.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\AdminManager.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowDQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T11:39:27.299Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "NotAuthorized.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\NotAuthorized.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\NotAuthorized.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\NotAuthorized.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\NotAuthorized.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-22T20:21:15.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAEcBAAAAAAAAAAAiwFIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T11:26:51.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AdminVievUsers.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminVievUsers.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\AdminVievUsers.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminVievUsers.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\AdminVievUsers.razor",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T10:54:10.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EventData.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\EventData.cs",
+              "RelativeDocumentMoniker": "Data\\EventData.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\EventData.cs",
+              "RelativeToolTip": "Data\\EventData.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAA3wIYAAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T20:40:44.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ParticipantManager.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ParticipantManager.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ParticipantManager.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ParticipantManager.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ParticipantManager.razor",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:26.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OrganizerManager.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\OrganizerManager.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\OrganizerManager.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\OrganizerManager.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\OrganizerManager.razor",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-27T06:35:51.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MessageList.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\MessageList.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\MessageList.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\MessageList.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\MessageList.razor",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAowPEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-25T16:48:11.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "MessagesList.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\MessagesList.css",
+              "RelativeDocumentMoniker": "wwwroot\\MessagesList.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\MessagesList.css",
+              "RelativeToolTip": "wwwroot\\MessagesList.css",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-30T09:11:27.873Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "AdminUpdateEvent.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminUpdateEvent.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\AdminUpdateEvent.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminUpdateEvent.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\AdminUpdateEvent.razor",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAowK4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T10:56:42.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "AddEvent.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AddEvent.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\AddEvent.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AddEvent.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\AddEvent.razor",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowKMAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-26T20:37:12.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "AddUser.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AddUser.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\AddUser.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AddUser.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\AddUser.razor",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowLcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-27T11:27:40.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "EventDetails.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\EventDetails.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\EventDetails.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\EventDetails.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\EventDetails.razor",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAtwH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-25T16:34:28.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "AdminUpdateUsers.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminUpdateUsers.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\AdminUpdateUsers.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminUpdateUsers.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\AdminUpdateUsers.razor",
+              "ViewState": "AgIAACQAAAAAAAAAAAAtwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T17:06:10.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Message.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Message.cs",
+              "RelativeDocumentMoniker": "Classes\\Message.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Message.cs",
+              "RelativeToolTip": "Classes\\Message.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:37:26.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Index.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\Index.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\Index.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\Index.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\Index.razor",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAqwHcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-19T18:18:45.983Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "MainLayout.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Layout\\MainLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Layout\\MainLayout.razor",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T18:33:17.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ShowRecoveryCodes.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\ShowRecoveryCodes.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Shared\\ShowRecoveryCodes.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\ShowRecoveryCodes.razor",
+              "RelativeToolTip": "Components\\Account\\Shared\\ShowRecoveryCodes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T19:24:55.755Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "StatusMessage.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\StatusMessage.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Shared\\StatusMessage.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\StatusMessage.razor",
+              "RelativeToolTip": "Components\\Account\\Shared\\StatusMessage.razor",
+              "ViewState": "AgIAADoAAAAAAAAAAAAswFIAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T19:18:25.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "RedirectToLogin.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\RedirectToLogin.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Shared\\RedirectToLogin.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\RedirectToLogin.razor",
+              "RelativeToolTip": "Components\\Account\\Shared\\RedirectToLogin.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T19:23:45.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "RegisterConfirmation.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\RegisterConfirmation.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\RegisterConfirmation.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\RegisterConfirmation.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\RegisterConfirmation.razor",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-30T20:08:59.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "LoginWithRecoveryCode.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\LoginWithRecoveryCode.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\LoginWithRecoveryCode.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\LoginWithRecoveryCode.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\LoginWithRecoveryCode.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:28.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "LoginWith2fa.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\LoginWith2fa.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\LoginWith2fa.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\LoginWith2fa.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\LoginWith2fa.razor",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:29.453Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "InvalidUser.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\InvalidUser.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\InvalidUser.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\InvalidUser.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\InvalidUser.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:38.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "InvalidPasswordReset.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\InvalidPasswordReset.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\InvalidPasswordReset.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\InvalidPasswordReset.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\InvalidPasswordReset.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:39.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ForgotPasswordConfirmation.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ForgotPasswordConfirmation.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ForgotPasswordConfirmation.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ForgotPasswordConfirmation.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ForgotPasswordConfirmation.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:40.184Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "ForgotPassword.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ForgotPassword.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ForgotPassword.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ForgotPassword.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ForgotPassword.razor",
+              "ViewState": "AgIAABEAAAAAAAAAAAAowEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T10:54:23.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ExternalLogin.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ExternalLogin.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ExternalLogin.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ExternalLogin.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ExternalLogin.razor",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAowM4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-21T19:56:58.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "EventWriteReview.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\EventWriteReview.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\EventWriteReview.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\EventWriteReview.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\EventWriteReview.razor",
+              "ViewState": "AgIAALQAAAAAAAAAAAAtwNQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-25T18:14:07.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ConfirmEmailChange.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ConfirmEmailChange.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\ConfirmEmailChange.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\ConfirmEmailChange.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\ConfirmEmailChange.razor",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowEMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:35:59.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "AdminVievEvents.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminVievEvents.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\AdminVievEvents.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\AdminVievEvents.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\AdminVievEvents.razor",
+              "ViewState": "AgIAABcAAAAAAAAAAAAowEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-20T17:11:34.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "Home.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAAAJsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-15T11:20:51.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "Error.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Pages\\Error.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Error.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Pages\\Error.razor",
+              "RelativeToolTip": "Components\\Pages\\Error.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T18:44:02.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "Auth.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Pages\\Auth.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Auth.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Pages\\Auth.razor",
+              "RelativeToolTip": "Components\\Pages\\Auth.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-27T06:25:06.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Review.cs",
+              "RelativeDocumentMoniker": "Classes\\Review.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Review.cs",
+              "RelativeToolTip": "Classes\\Review.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T09:14:42.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "Participant.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Participant.cs",
+              "RelativeDocumentMoniker": "Classes\\Participant.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Participant.cs",
+              "RelativeToolTip": "Classes\\Participant.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T14:27:17.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "Guest.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Guest.cs",
+              "RelativeDocumentMoniker": "Classes\\Guest.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Guest.cs",
+              "RelativeToolTip": "Classes\\Guest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:37:52.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Event.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Event.cs",
+              "RelativeDocumentMoniker": "Classes\\Event.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Classes\\Event.cs",
+              "RelativeToolTip": "Classes\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T10:57:10.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "ExternalLogins.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\ExternalLogins.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\ExternalLogins.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\ExternalLogins.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\ExternalLogins.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:03.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "Disable2fa.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\Disable2fa.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\Disable2fa.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\Disable2fa.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\Disable2fa.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:14.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ChangePassword.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\ChangePassword.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\ChangePassword.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\ChangePassword.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\ChangePassword.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:16.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\_Imports.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\_Imports.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:16.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "TwoFactorAuthentication.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\TwoFactorAuthentication.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\TwoFactorAuthentication.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\TwoFactorAuthentication.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\TwoFactorAuthentication.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:07.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "SetPassword.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\SetPassword.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\SetPassword.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\SetPassword.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\SetPassword.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:05.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "ResetAuthenticator.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\ResetAuthenticator.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\ResetAuthenticator.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\ResetAuthenticator.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\ResetAuthenticator.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:08.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "PersonalData.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\PersonalData.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\PersonalData.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\PersonalData.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\PersonalData.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:19:57.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\_Imports.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\_Imports.razor",
+              "RelativeToolTip": "Components\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T18:43:56.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "App.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\App.razor",
+              "RelativeDocumentMoniker": "Components\\App.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\App.razor",
+              "RelativeToolTip": "Components\\App.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T18:43:50.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "Routes.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Routes.razor",
+              "RelativeDocumentMoniker": "Components\\Routes.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Routes.razor",
+              "RelativeToolTip": "Components\\Routes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T18:43:44.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ManageNavMenu.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\ManageNavMenu.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Shared\\ManageNavMenu.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\ManageNavMenu.razor",
+              "RelativeToolTip": "Components\\Account\\Shared\\ManageNavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T19:23:56.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "ManageLayout.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\ManageLayout.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Shared\\ManageLayout.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\ManageLayout.razor",
+              "RelativeToolTip": "Components\\Account\\Shared\\ManageLayout.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-27T06:19:40.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "ExternalLoginPicker.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\ExternalLoginPicker.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Shared\\ExternalLoginPicker.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Shared\\ExternalLoginPicker.razor",
+              "RelativeToolTip": "Components\\Account\\Shared\\ExternalLoginPicker.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-23T19:24:09.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "Home.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\Home.css",
+              "RelativeDocumentMoniker": "wwwroot\\Home.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\Home.css",
+              "RelativeToolTip": "wwwroot\\Home.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAADkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-30T21:22:58.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "LoginForm.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\LoginForm.css",
+              "RelativeDocumentMoniker": "wwwroot\\LoginForm.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\LoginForm.css",
+              "RelativeToolTip": "wwwroot\\LoginForm.css",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEAAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-29T20:39:23.626Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "AdminDashboard.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AdminDashboard.css",
+              "RelativeDocumentMoniker": "wwwroot\\AdminDashboard.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AdminDashboard.css",
+              "RelativeToolTip": "wwwroot\\AdminDashboard.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-28T19:05:37.252Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "ParticipantDashboard.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\ParticipantDashboard.css",
+              "RelativeDocumentMoniker": "wwwroot\\ParticipantDashboard.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\ParticipantDashboard.css",
+              "RelativeToolTip": "wwwroot\\ParticipantDashboard.css",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAFEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-30T16:27:05.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "AdminEvents.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AdminEvents.css",
+              "RelativeDocumentMoniker": "wwwroot\\AdminEvents.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AdminEvents.css",
+              "RelativeToolTip": "wwwroot\\AdminEvents.css",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-29T11:27:19.401Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "OrganizerDashboard.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\OrganizerDashboard.css",
+              "RelativeDocumentMoniker": "wwwroot\\OrganizerDashboard.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\OrganizerDashboard.css",
+              "RelativeToolTip": "wwwroot\\OrganizerDashboard.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-30T16:16:16.628Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "SubEvents.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\SubEvents.css",
+              "RelativeDocumentMoniker": "wwwroot\\SubEvents.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\SubEvents.css",
+              "RelativeToolTip": "wwwroot\\SubEvents.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-30T20:58:50.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "SendM.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\SendM.css",
+              "RelativeDocumentMoniker": "wwwroot\\SendM.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\SendM.css",
+              "RelativeToolTip": "wwwroot\\SendM.css",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-30T20:13:21.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "Register.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\Register.css",
+              "RelativeDocumentMoniker": "wwwroot\\Register.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\Register.css",
+              "RelativeToolTip": "wwwroot\\Register.css",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAIUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-30T20:08:13.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "AddUser.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AddUser.css",
+              "RelativeDocumentMoniker": "wwwroot\\AddUser.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AddUser.css",
+              "RelativeToolTip": "wwwroot\\AddUser.css",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAGQAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-28T18:58:02.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "app.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\app.css",
+              "RelativeDocumentMoniker": "wwwroot\\app.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\app.css",
+              "RelativeToolTip": "wwwroot\\app.css",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAP4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-25T16:32:23.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "UpdateUser.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\UpdateUser.css",
+              "RelativeDocumentMoniker": "wwwroot\\UpdateUser.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\UpdateUser.css",
+              "RelativeToolTip": "wwwroot\\UpdateUser.css",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAHoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-29T11:12:48.681Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "ReviewForm.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\ReviewForm.css",
+              "RelativeDocumentMoniker": "wwwroot\\ReviewForm.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\ReviewForm.css",
+              "RelativeToolTip": "wwwroot\\ReviewForm.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-29T20:15:02.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "EventDetails.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\EventDetails.css",
+              "RelativeDocumentMoniker": "wwwroot\\EventDetails.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\EventDetails.css",
+              "RelativeToolTip": "wwwroot\\EventDetails.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-29T12:33:38.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "AddUsEv.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AddUsEv.css",
+              "RelativeDocumentMoniker": "wwwroot\\AddUsEv.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\wwwroot\\AddUsEv.css",
+              "RelativeToolTip": "wwwroot\\AddUsEv.css",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAAAMYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-28T13:03:04.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "MainLayout.razor.css",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeDocumentMoniker": "Components\\Layout\\MainLayout.razor.css",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Layout\\MainLayout.razor.css",
+              "RelativeToolTip": "Components\\Layout\\MainLayout.razor.css",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAAAG4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-23T18:31:50.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "_Imports.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\_Imports.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\_Imports.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\_Imports.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\_Imports.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:19.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "IdentityUserAccessor.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityUserAccessor.cs",
+              "RelativeDocumentMoniker": "Components\\Account\\IdentityUserAccessor.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityUserAccessor.cs",
+              "RelativeToolTip": "Components\\Account\\IdentityUserAccessor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T19:26:56.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "IdentityRedirectManager.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityRedirectManager.cs",
+              "RelativeDocumentMoniker": "Components\\Account\\IdentityRedirectManager.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityRedirectManager.cs",
+              "RelativeToolTip": "Components\\Account\\IdentityRedirectManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T06:18:39.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 93,
+              "Title": "IdentityRevalidatingAuthenticationStateProvider.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityRevalidatingAuthenticationStateProvider.cs",
+              "RelativeDocumentMoniker": "Components\\Account\\IdentityRevalidatingAuthenticationStateProvider.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityRevalidatingAuthenticationStateProvider.cs",
+              "RelativeToolTip": "Components\\Account\\IdentityRevalidatingAuthenticationStateProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T19:26:59.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 94,
+              "Title": "IdentityNoOpEmailSender.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityNoOpEmailSender.cs",
+              "RelativeDocumentMoniker": "Components\\Account\\IdentityNoOpEmailSender.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityNoOpEmailSender.cs",
+              "RelativeToolTip": "Components\\Account\\IdentityNoOpEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T06:18:11.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 95,
+              "Title": "IdentityComponentsEndpointRouteBuilderExtensions.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityComponentsEndpointRouteBuilderExtensions.cs",
+              "RelativeDocumentMoniker": "Components\\Account\\IdentityComponentsEndpointRouteBuilderExtensions.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\IdentityComponentsEndpointRouteBuilderExtensions.cs",
+              "RelativeToolTip": "Components\\Account\\IdentityComponentsEndpointRouteBuilderExtensions.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAQwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T19:40:18.028Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 96,
+              "Title": "GenerateRecoveryCodes.razor",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\GenerateRecoveryCodes.razor",
+              "RelativeDocumentMoniker": "Components\\Account\\Pages\\Manage\\GenerateRecoveryCodes.razor",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Components\\Account\\Pages\\Manage\\GenerateRecoveryCodes.razor",
+              "RelativeToolTip": "Components\\Account\\Pages\\Manage\\GenerateRecoveryCodes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-16T10:20:02.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 97,
+              "Title": "dbo.Messages.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.Messages.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.Messages.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-25T17:41:39.715Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 98,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-25T17:22:06.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 112,
+              "Title": "20241223112659_InitialCreate.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241223112659_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241223112659_InitialCreate.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241223112659_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20241223112659_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:27:00.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 111,
+              "Title": "20241223112745_InitialCreate.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\DataEventMigrations\\20241223112745_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\DataEventMigrations\\20241223112745_InitialCreate.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\DataEventMigrations\\20241223112745_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\DataEventMigrations\\20241223112745_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:27:46.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 99,
+              "Title": "20241223112156_InitialCreate.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\ApplicationDb\\20241223112156_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\ApplicationDb\\20241223112156_InitialCreate.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\ApplicationDb\\20241223112156_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\ApplicationDb\\20241223112156_InitialCreate.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:21:56.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 100,
+              "Title": "20241223112101_InitialCreate.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241223112101_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241223112101_InitialCreate.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241223112101_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20241223112101_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T11:21:02.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 101,
+              "Title": "20241223105502_MakeOrganizerIdNullable.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241223105502_MakeOrganizerIdNullable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241223105502_MakeOrganizerIdNullable.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241223105502_MakeOrganizerIdNullable.cs",
+              "RelativeToolTip": "Migrations\\20241223105502_MakeOrganizerIdNullable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T10:55:02.271Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 102,
+              "Title": "20241223103700_InitialApplicationDbMigration.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\ApplicationDb\\20241223103700_InitialApplicationDbMigration.cs",
+              "RelativeDocumentMoniker": "Migrations\\ApplicationDb\\20241223103700_InitialApplicationDbMigration.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\ApplicationDb\\20241223103700_InitialApplicationDbMigration.cs",
+              "RelativeToolTip": "Migrations\\ApplicationDb\\20241223103700_InitialApplicationDbMigration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T10:37:00.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 103,
+              "Title": "20241222162936_MakeOrganizerIdNullable.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241222162936_MakeOrganizerIdNullable.cs",
+              "RelativeDocumentMoniker": "Migrations\\20241222162936_MakeOrganizerIdNullable.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\20241222162936_MakeOrganizerIdNullable.cs",
+              "RelativeToolTip": "Migrations\\20241222162936_MakeOrganizerIdNullable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-22T16:29:36.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 104,
+              "Title": "dbo.ApplicationUser.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.ApplicationUser.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.ApplicationUser.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-21T19:55:09.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 107,
+              "Title": "20241213210714_InitialCreate.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\20241213210714_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20241213210714_InitialCreate.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\20241213210714_InitialCreate.cs",
+              "RelativeToolTip": "Data\\Migrations\\20241213210714_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T14:21:49.64Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 108,
+              "Title": "00000000000000_CreateIdentitySchema.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "RelativeToolTip": "Data\\Migrations\\00000000000000_CreateIdentitySchema.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAQwN0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T14:21:20.548Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 105,
+              "Title": "dbo.EventParticipant.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.EventParticipant.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.EventParticipant.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-21T19:55:00.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 109,
+              "Title": "20241221183429_UpdateEventParticipantRelations.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\DataEventMigrations\\20241221183429_UpdateEventParticipantRelations.cs",
+              "RelativeDocumentMoniker": "Migrations\\DataEventMigrations\\20241221183429_UpdateEventParticipantRelations.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Migrations\\DataEventMigrations\\20241221183429_UpdateEventParticipantRelations.cs",
+              "RelativeToolTip": "Migrations\\DataEventMigrations\\20241221183429_UpdateEventParticipantRelations.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T18:34:29.902Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 110,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\KompSC\\Edu\\Cpp_codes\\Kurs\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T14:21:23.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 106,
+              "Title": "dbo.AspNetUsers.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.AspNetUsers.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/aspnet_Kurs_6af05947_3619_45f8_90ba_197d4237c755/True/SqlTable/dbo.AspNetUsers.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-20T13:12:21.13Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

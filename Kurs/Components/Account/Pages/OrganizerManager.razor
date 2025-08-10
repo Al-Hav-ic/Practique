@@ -1,0 +1,118 @@
+﻿
+
+@page "/organizer/dashboard"
+
+@using Kurs.Classes
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+@using Kurs.Components
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject IEventData eventRep
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.Authorization
+@inject AuthenticationStateProvider AuthenticationStateProvider
+<link href="OrganizerDashboard.css" rel="stylesheet" />
+<PageTitle>Organizer Dashboard</PageTitle>
+<AuthorizeView>
+    <Authorized>
+<button class="admin-button" @onclick="NavigateToAddEvent">Додати Нову Подію</button>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Назва Події</th>
+            <th>Дата</th>
+            <th>Локація</th>
+            <th>Опис</th>
+            <th>Переглянути Деталі</th>
+            <th>Редагувати</th>
+            <th>Видалити</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var eventItem in allEvents)
+        {
+            <tr>
+                <td>@eventItem.Name</td>
+                <td>@eventItem.Date</td>
+                <td>@eventItem.Location</td>
+                <td>@eventItem.Description</td>
+                <td><button class="admin-button" @onclick="() => NavigateToEventDetails(eventItem.Id)">Переглянути Деталі</button></td>
+                <td><button class="admin-button" @onclick="() => NavigateToEditEvent(eventItem.Id)">Редагувати</button></td>
+                <td><button class="admin-button" @onclick="() => RemoveEvent(eventItem.Id)">Видалити</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+    </Authorized>
+    <NotAuthorized>
+        <p>Ви не Авторизовані , просимо перейти за посиланням</p>
+        <NavLink href="Account/Login" class="btn btn-primary">Login</NavLink>
+    </NotAuthorized>
+</AuthorizeView>
+@code {
+    private IEnumerable<Event> allEvents = new List<Event>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            var currentUser = await UserManager.GetUserAsync(user);
+            if (currentUser != null)
+            {
+                // Get organizer from the database using the method in EventData
+                var organizer = await eventRep.GetOrganizerByUserIdAsync(currentUser.Id);
+                if (organizer != null)
+                {
+                    // Get all events created by the current organizer
+                    allEvents = await eventRep.GetEventsByOrganizerIdAsync(organizer.Id);
+                }
+            }
+        }
+    }
+
+    private void NavigateToAddEvent()
+    {
+        NavigationManager.NavigateTo("/admin/addevent"); // Navigate to add event page
+    }
+
+    private void NavigateToEditEvent(int eventId)
+    {
+        NavigationManager.NavigateTo($"/admin/updateevent/{eventId}"); // Navigate to the edit event page
+    }
+
+    private void NavigateToEventDetails(int eventId)
+    {
+        NavigationManager.NavigateTo($"/event/details/{eventId}"); // Navigate to the event details page
+    }
+
+    private async Task RemoveEvent(int eventId)
+    {
+        // Call the delete method from the EventData service
+        await eventRep.DeleteEventAsync(eventId);
+
+        // Refresh the list after deletion
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (user.Identity.IsAuthenticated)
+        {
+            var currentUser = await UserManager.GetUserAsync(user);
+            if (currentUser != null)
+            {
+                // Get organizer from the database using the method in EventData
+                var organizer = await eventRep.GetOrganizerByUserIdAsync(currentUser.Id);
+                if (organizer != null)
+                {
+                    // Get all events created by the current organizer
+                    allEvents = await eventRep.GetEventsByOrganizerIdAsync(organizer.Id);
+                }
+            }
+        }
+    }
+}

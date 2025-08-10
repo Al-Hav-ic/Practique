@@ -1,0 +1,278 @@
+﻿
+@page "/Account/Register"
+
+@using System.ComponentModel.DataAnnotations
+@using System.Text
+@using System.Text.Encodings.Web
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.WebUtilities
+@using Kurs.Data
+<link href="Register.css" rel="stylesheet" />
+@inject UserManager<ApplicationUser> UserManager
+@inject IUserStore<ApplicationUser> UserStore
+@inject SignInManager<ApplicationUser> SignInManager
+@inject IEmailSender<ApplicationUser> EmailSender
+@inject ILogger<Register> Logger
+@inject NavigationManager NavigationManager
+@inject IdentityRedirectManager RedirectManager
+
+<PageTitle>Register</PageTitle>
+
+<h1>Реєстрація</h1>
+
+<div class="row">
+    <div class="col-lg-6">
+        <StatusMessage Message="@Message" />
+        <EditForm Model="Input" asp-route-returnUrl="@ReturnUrl" method="post" OnValidSubmit="RegisterUser" FormName="register">
+            <DataAnnotationsValidator />
+            <h2>Створіть Новий Акаунт</h2>
+            <hr />
+            <ValidationSummary class="text-danger" role="alert" />
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="Input.Name" id="Input.Name" class="form-control" aria-required="true" placeholder="Name" />
+                <label for="Input.Name">Ім'я Користувача</label>
+                <ValidationMessage For="() => Input.Name" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
+                <InputText @bind-Value="Input.Email" id="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <label for="Input.Email">Email</label>
+                <ValidationMessage For="() => Input.Email" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
+                <InputText type="password" @bind-Value="Input.Password" id="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <label for="Input.Password">Пароль</label>
+                <ValidationMessage For="() => Input.Password" class="text-danger" />
+            </div>
+            <div class="form-floating mb-3">
+                <InputText type="password" @bind-Value="Input.ConfirmPassword" id="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <label for="Input.ConfirmPassword">Підтвердіть Пароль</label>
+                <ValidationMessage For="() => Input.ConfirmPassword" class="text-danger" />
+            </div>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Реєстрація</button>
+        </EditForm>
+    </div>
+    @* <div class="col-lg-4 col-lg-offset-2">
+        <section>
+            <h3></h3>
+            <hr />
+            <ExternalLoginPicker />
+        </section>
+    </div> *@
+</div>
+
+@code {
+    private IEnumerable<IdentityError>? identityErrors;
+
+    [SupplyParameterFromForm]
+    private InputModel Input { get; set; } = new();
+
+    [SupplyParameterFromQuery]
+    private string? ReturnUrl { get; set; }
+
+    private string? Message => identityErrors is null ? null : $"Error: {string.Join(", ", identityErrors.Select(error => error.Description))}";
+
+    public async Task RegisterUser()
+    {
+        var user = CreateUser();
+        user.UserName = Input.Name; // Встановлюємо UserName як ім'я користувача, а не Email
+        user.Role = "Participant";  // Встановлюємо роль за замовчуванням
+        await UserStore.SetUserNameAsync(user, Input.Name, CancellationToken.None); // Використовуємо ім'я користувача
+        var emailStore = GetEmailStore();
+        await emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+        var result = await UserManager.CreateAsync(user, Input.Password);
+
+        if (!result.Succeeded)
+        {
+            identityErrors = result.Errors;
+            return;
+        }
+
+        Logger.LogInformation("User created a new account with password.");
+
+        var userId = await UserManager.GetUserIdAsync(user);
+        var code = await UserManager.GenerateEmailConfirmationTokenAsync(user);
+        code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
+        var callbackUrl = NavigationManager.GetUriWithQueryParameters(
+            NavigationManager.ToAbsoluteUri("Account/ConfirmEmail").AbsoluteUri,
+            new Dictionary<string, object?> { ["userId"] = userId, ["code"] = code, ["returnUrl"] = ReturnUrl });
+
+        await EmailSender.SendConfirmationLinkAsync(user, Input.Email, HtmlEncoder.Default.Encode(callbackUrl));
+
+        // Встановлення ролі за замовчуванням "Participant"
+        var roleResult = await UserManager.AddToRoleAsync(user, "Participant");
+        if (!roleResult.Succeeded)
+        {
+            identityErrors = roleResult.Errors;
+            return;
+        }
+
+        // Якщо потрібно підтвердження електронної пошти, перенаправляємо на сторінку підтвердження
+        if (UserManager.Options.SignIn.RequireConfirmedAccount)
+        {
+            RedirectManager.RedirectTo(
+                "Account/RegisterConfirmation",
+                new() { ["email"] = Input.Email, ["returnUrl"] = ReturnUrl });
+        }
+
+        await SignInManager.SignInAsync(user, isPersistent: false);
+        RedirectManager.RedirectTo(ReturnUrl);
+    }
+
+    private ApplicationUser CreateUser()
+    {
+        try
+        {
+            return Activator.CreateInstance<ApplicationUser>();
+        }
+        catch
+        {
+            throw new InvalidOperationException($"Can't create an instance of '{nameof(ApplicationUser)}'. " +
+                $"Ensure that '{nameof(ApplicationUser)}' is not an abstract class and has a parameterless constructor.");
+        }
+    }
+
+    private IUserEmailStore<ApplicationUser> GetEmailStore()
+    {
+        if (!UserManager.SupportsUserEmail)
+        {
+            throw new NotSupportedException("The default UI requires a user store with email support.");
+        }
+        return (IUserEmailStore<ApplicationUser>)UserStore;
+    }
+
+    private sealed class InputModel
+    {
+        [Required]
+        [Display(Name = "Name")]
+        public string Name { get; set; } = "";
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; } = "";
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string Password { get; set; } = "";
+
+        [DataType(DataType.Password)]
+        [Display(Name = "Confirm password")]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; } = "";
+    }
+}
+
+
+ @*  @page "/Account/Register"
+
+@using System.ComponentModel.DataAnnotations
+@using Microsoft.AspNetCore.Identity
+@using Kurs.Data
+@inject UserManager<ApplicationUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject ILogger<Register> Logger
+@inject NavigationManager NavigationManager
+<PageTitle>Register</PageTitle>
+@rendermode InteractiveServer
+<h1>Register</h1>
+
+<EditForm Model="Input" OnValidSubmit="RegisterUser" FormName="RegisterForm">
+    <DataAnnotationsValidator />
+    <ValidationSummary class="text-danger" />
+
+    <div class="form-floating mb-3">
+        <InputText id="Input.UserName" class="form-control" @bind-Value="Input.UserName" placeholder="Username" required />
+        <label for="Input.UserName">Username</label>
+        <ValidationMessage For="() => Input.UserName" class="text-danger" />
+    </div>
+
+    <div class="form-floating mb-3">
+        <InputText id="Input.Email" type="email" class="form-control" @bind-Value="Input.Email" placeholder="Email" required />
+        <label for="Input.Email">Email</label>
+        <ValidationMessage For="() => Input.Email" class="text-danger" />
+    </div>
+
+    <div class="form-floating mb-3">
+        <InputText id="Input.Password" type="password" class="form-control" @bind-Value="Input.Password" placeholder="Password" required />
+        <label for="Input.Password">Password</label>
+        <ValidationMessage For="() => Input.Password" class="text-danger" />
+    </div>
+
+    <div class="form-floating mb-3">
+        <InputText id="Input.ConfirmPassword" type="password" class="form-control" @bind-Value="Input.ConfirmPassword" placeholder="Confirm Password" required />
+        <label for="Input.ConfirmPassword">Confirm Password</label>
+        <ValidationMessage For="() => Input.ConfirmPassword" class="text-danger" />
+    </div>
+
+    <div class="form-floating mb-3">
+        <InputSelect id="Input.Role" @bind-Value="Input.Role" class="form-control" required>
+            <option value="">Select Role</option>
+            <option value="Admin">Admin</option>
+            <option value="Organiser">Organiser</option>
+            <option value="Participant">Participant</option>
+        </InputSelect>
+        <label for="Input.Role">Role</label>
+        <ValidationMessage For="() => Input.Role" class="text-danger" />
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Register</button>
+</EditForm>
+
+@code {
+    private InputModel Input { get; set; } = new InputModel();
+    private string? errorMessage;
+
+    public class InputModel
+    {
+        [Required]
+        public string UserName { get; set; } = string.Empty;
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; } = string.Empty;
+
+        [Required]
+        [DataType(DataType.Password)]
+        public string Password { get; set; } = string.Empty;
+
+        [Required]
+        [DataType(DataType.Password)]
+        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        public string ConfirmPassword { get; set; } = string.Empty;
+
+        [Required]
+        public string Role { get; set; } = string.Empty;
+    }
+
+    public async Task RegisterUser()
+    {
+        var user = new ApplicationUser { UserName = Input.UserName, Email = Input.Email };
+        var result = await UserManager.CreateAsync(user, Input.Password);
+
+        if (result.Succeeded)
+        {
+            // Add the selected role to the user
+            var roleResult = await UserManager.AddToRoleAsync(user, Input.Role);
+            if (roleResult.Succeeded)
+            {
+                Logger.LogInformation("User registered successfully.");
+                await SignInManager.SignInAsync(user, isPersistent: false);
+
+                // Redirect the user to the login page or account page
+                NavigationManager.NavigateTo("/Account/Login");
+            }
+            else
+            {
+                errorMessage = "Error adding role.";
+            }
+        }
+        else
+        {
+            errorMessage = "Error registering user.";
+        }
+    }
+}
+
+ *@
